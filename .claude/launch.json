@@ -4,7 +4,7 @@
     {
       "name": "graebeck",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4200"],
+      "runtimeArgs": ["/tmp/serve.py"],
       "port": 4200
     }
   ]
