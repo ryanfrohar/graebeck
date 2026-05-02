@@ -5,288 +5,211 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — Graebeck Construction Ltd.</title>
   <meta name="description" content="General Contracting, Construction Management, Project Management, and Design Build — Graebeck Construction Ltd., Ottawa's trusted builder since 2000." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.graebeck.com/services.html" />
+  <meta property="og:title"       content="Services — Graebeck Construction Ltd." />
+  <meta property="og:description" content="General Contracting, Construction Management, Project Management, and Design Build from Ottawa's trusted builder since 2000." />
+  <meta property="og:image"       content="https://www.graebeck.com/images/projects/parliament-hill.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="canonical" href="https://www.graebeck.com/services.html" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            onyx: '#1A1A1A', forest: '#227750', 'forest-dark': '#1a5c3a',
-            cool: '#F4F4F9', gold: '#005193', 'gold-light': '#0066b8',
-          },
-          fontFamily: { montserrat: ['Montserrat', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind-config.js"></script>
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 <body class="bg-cool text-onyx">
 
-  <!-- NAV -->
-  <nav id="navbar" class="fixed top-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="nav-logo flex items-center gap-3 no-underline">
-          <img src="images/logo.png" alt="Graebeck Construction Ltd." style="height:48px;width:auto;display:block;" />
-        </a>
-        <div class="hidden md:flex items-center gap-10 ml-8 lg:ml-12">
-          <a href="index.html"    class="nav-link">Home</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="services.html" class="nav-link active">Services</a>
-          <a href="about.html"    class="nav-link">About</a>
-          <a href="contact.html"  class="btn-primary" style="padding:12px 24px;font-size:0.72rem;">Get a Quote</a>
-        </div>
-        <button id="hamburger" class="hamburger md:hidden" aria-label="Open navigation" aria-controls="nav-overlay" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div id="site-nav"></div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" aria-label="Services page hero">
+      <div class="page-hero-bg" style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=90');background-size:cover;background-position:center 40%;z-index:0;" aria-hidden="true"></div>
+      <div class="page-hero-overlay" style="position:absolute;inset:0;background:linear-gradient(108deg,rgba(10,10,10,0.88) 0%,rgba(17,17,17,0.72) 50%,rgba(26,26,26,0.50) 100%);z-index:1;" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 page-hero-content">
+        <p class="label-overline light">What We Do</p>
+        <div class="gold-divider"></div>
+        <h1 class="heading-display text-white" style="font-size:clamp(2.2rem,5vw,4rem);">Our Services</h1>
+        <p class="text-gray-400 font-inter mt-4 max-w-xl text-lg leading-relaxed">
+          From concept to commissioning — a full spectrum of construction services
+          delivered with the discipline Ottawa's most demanding projects require.
+        </p>
       </div>
     </div>
-  </nav>
 
-  <!-- Full-screen nav overlay -->
-  <div id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
-    <div class="overlay-header">
-      <a href="index.html" class="overlay-logo">
-        <img src="images/logo-footer.png" alt="Graebeck Construction Ltd." />
-      </a>
-      <button id="overlay-close" class="overlay-close" aria-label="Close navigation">&times;</button>
-    </div>
-    <nav class="overlay-nav">
-      <a href="index.html"    class="overlay-link">Home</a>
-      <a href="projects.html" class="overlay-link">Projects</a>
-      <a href="services.html" class="overlay-link active-page">Services</a>
-      <a href="about.html"    class="overlay-link">About</a>
-      <a href="contact.html"  class="overlay-cta">Get a Quote <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </nav>
-    <div class="overlay-footer">
-      <span class="overlay-tagline">Graebeck Construction Ltd.</span>
-      <span class="overlay-tagline">Ottawa, ON &mdash; Est. 2000</span>
-    </div>
-  </div>
+    <!-- ─── GENERAL CONTRACTING ──────────────────────────────────────────── -->
+    <section id="general-contracting" class="py-24 bg-cool" aria-labelledby="gc-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="page-hero-bg" style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=90');background-size:cover;background-position:center 40%;z-index:0;"></div>
-    <div class="page-hero-overlay" style="position:absolute;inset:0;background:linear-gradient(108deg,rgba(10,10,10,0.88) 0%,rgba(17,17,17,0.72) 50%,rgba(26,26,26,0.50) 100%);z-index:1;"></div>
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 page-hero-content">
-      <p class="label-overline light t-label">What We Do</p>
-      <div class="gold-divider"></div>
-      <h1 class="heading-display text-white" style="font-size:clamp(2.2rem,5vw,4rem);">Our Services</h1>
-      <p class="text-gray-400 font-inter mt-4 max-w-xl text-lg leading-relaxed">
-        From concept to commissioning — a full spectrum of construction services
-        delivered with the discipline Ottawa's most demanding projects require.
-      </p>
-    </div>
-  </div>
-
-  <!-- ─── GENERAL CONTRACTING ──────────────────────────────────────────── -->
-  <section id="general-contracting" class="py-24 bg-cool">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        <div data-reveal>
-          <img src="images/projects/parliament-hill.jpg"
-               alt="Parliament Hill — General Contracting" class="w-full h-80 object-cover" loading="lazy" />
-        </div>
-
-        <div data-reveal data-delay="120">
-          <h2 class="heading-section text-onyx text-3xl mb-3 t-display">General Contracting</h2>
-          <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">Affordable &amp; Effective Contracting</p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-4 t-body">
-            Graebeck provides general contracting services leveraging over 20 years of operational
-            experience in the National Capital Region. We offer lump sum tendering, guaranteed upset
-            pricing, and competitive cost plus fee arrangements — ensuring value delivery regardless
-            of project scope.
-          </p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-6 t-body">
-            Our approach places a senior superintendent on-site from mobilisation through substantial
-            completion. Rigorous sub-trade management, daily site reporting, and proactive issue
-            resolution are standard on every project we build.
-          </p>
-          <ul class="space-y-2 mb-8">
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Lump Sum Tendering</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Guaranteed Upset Pricing</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Competitive Cost Plus Fee Arrangements</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Federal &amp; Institutional Procurement Expertise</li>
-          </ul>
-          <a href="projects.html" class="btn-dark inline-flex">See Our Projects</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CONSTRUCTION MANAGEMENT ─────────────────────────────────────── -->
-  <section id="construction-management" style="background:#ffffff;" class="py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        <div class="order-2 lg:order-1" data-reveal data-delay="120">
-          <h2 class="heading-section text-onyx text-3xl mb-3 t-display">Construction Management</h2>
-          <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">Overseeing Your Project's Success</p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-4 t-body">
-            Drawing on extensive construction experience in Ottawa, Graebeck provides comprehensive
-            construction management services spanning preliminary budgeting, constructability analysis,
-            value engineering, detailed scheduling, and sub-trade tendering — all aligned from earliest
-            planning stages through final commissioning.
-          </p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-6 t-body">
-            Our construction managers serve as your on-site authority: directing trades, managing quality
-            control, and providing transparent cost and schedule reporting throughout every phase of delivery.
-          </p>
-          <ul class="space-y-2 mb-8">
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Preliminary Budgeting &amp; Estimating</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Constructability Analysis</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Value Engineering &amp; Scheduling</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Sub-Trade Coordination &amp; Tendering</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Quality Control &amp; Commissioning</li>
-          </ul>
-          <a href="projects.html" class="btn-dark inline-flex">See Our Projects</a>
-        </div>
-
-        <div class="order-1 lg:order-2" data-reveal>
-          <img src="images/projects/commissionaires.jpg"
-               alt="Commissionaires Ottawa — Construction Management" class="w-full h-80 object-cover" loading="lazy" />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PROJECT MANAGEMENT ───────────────────────────────────────────── -->
-  <section id="project-management" class="py-24 bg-cool">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        <div data-reveal>
-          <img src="images/projects/cd-howe-building.jpg"
-               alt="C.D. Howe Building — Project Management" class="w-full h-80 object-cover" loading="lazy" />
-        </div>
-
-        <div data-reveal data-delay="120">
-          <h2 class="heading-section text-onyx text-3xl mb-3 t-display">Project Management</h2>
-          <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">Exceeding Your Expectations</p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-4 t-body">
-            Graebeck's project managers and coordinators offer a comprehensive suite of owner's
-            representative services: project programming, site selection, feasibility studies,
-            design development, budgeting, value engineering, tendering, and construction supervision.
-          </p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-6 t-body">
-            We act as your dedicated advocate throughout the project lifecycle — protecting your
-            interests, managing your schedule, and holding your budget accountable through quality
-            control, commissioning, and move management.
-          </p>
-          <ul class="space-y-2 mb-8">
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Project Programming &amp; Feasibility Studies</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Site Selection &amp; Design Development</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Budget Control &amp; Transparent Reporting</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Construction Supervision &amp; Quality Control</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Commissioning &amp; Move Management</li>
-          </ul>
-          <a href="projects.html" class="btn-dark inline-flex">See Our Projects</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── DESIGN BUILD ──────────────────────────────────────────────────── -->
-  <section id="design-build" style="background:#ffffff;" class="py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        <div class="order-2 lg:order-1" data-reveal data-delay="120">
-          <h2 class="heading-section text-onyx text-3xl mb-3 t-display">Design Build</h2>
-          <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">From Concept to Completion</p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-4 t-body">
-            Graebeck's design-build service delivers a fully integrated solution from project
-            inception through to occupancy. A single point of accountability spans site selection,
-            outline specifications, design development, construction, fit-out, and commissioning —
-            streamlining the process and reducing risk for the owner.
-          </p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-6 t-body">
-            By combining design and construction responsibility under one contract, design-build
-            shortens project timelines, enables early cost certainty, and fosters collaboration
-            between the design team and trades from day one.
-          </p>
-          <ul class="space-y-2 mb-8">
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Site Selection &amp; Outline Specifications</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Integrated Design Development</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Single Point of Accountability</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Accelerated Project Delivery</li>
-            <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0"></span>Fit-Out &amp; Commissioning</li>
-          </ul>
-          <a href="contact.html" class="btn-dark inline-flex">Discuss Your Project</a>
-        </div>
-
-        <div class="order-1 lg:order-2" data-reveal>
-          <img src="images/projects/beau-roc.png"
-               alt="Les Ateliers Beau-Roc — Design Build" class="w-full h-80 object-cover" loading="lazy" />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA — matches about.html pattern: dark bg, centred heading, two buttons -->
-  <section class="cta-section py-24">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-      <h2 class="heading-section text-white text-3xl mb-4">Ready to Get Started?</h2>
-      <p class="text-gray-400 font-inter mb-8">Tell us about your project and we'll schedule a no-obligation consultation.</p>
-      <div class="flex flex-wrap gap-5 justify-center">
-        <a href="contact.html"   class="btn-primary">Contact Us</a>
-        <a href="tel:6135919100" class="btn-outline">Call (613) 591-9100</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div class="lg:col-span-1">
-          <div class="flex items-center gap-3 mb-5">
-            <img src="images/logo-footer.png" alt="Graebeck Construction Ltd." style="height:40px;width:auto;display:block;" />
+          <div data-reveal>
+            <img src="images/projects/parliament-hill.jpg"
+                 alt="Parliament Hill — General Contracting project" class="w-full h-80 object-cover" loading="lazy" />
           </div>
-          <p class="text-gray-500 text-sm font-inter leading-relaxed">Building the National Capital Region's most trusted structures since 2000.</p>
-        </div>
-        <div>
-          <h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Navigation</h4>
-          <nav class="flex flex-col">
-            <a href="index.html"    class="footer-link">Home</a>
-            <a href="projects.html" class="footer-link">Projects</a>
-            <a href="services.html" class="footer-link">Services</a>
-            <a href="about.html"    class="footer-link">About Us</a>
-            <a href="contact.html"  class="footer-link">Contact</a>
-          </nav>
-        </div>
-        <div>
-          <h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Services</h4>
-          <nav class="flex flex-col">
-            <a href="services.html#general-contracting"     class="footer-link">General Contracting</a>
-            <a href="services.html#construction-management" class="footer-link">Construction Management</a>
-            <a href="services.html#project-management"      class="footer-link">Project Management</a>
-            <a href="services.html#design-build"            class="footer-link">Design Build</a>
-          </nav>
-        </div>
-        <div>
-          <h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Contact Us</h4>
-          <address class="not-italic text-gray-500 font-inter text-sm leading-loose">
-            6361 Fourth Line Road<br/>North Gower, ON &nbsp;K0A 2T0
-          </address>
-          <a href="tel:6135919100" class="block text-gray-400 hover:text-gold transition-colors font-inter text-sm mt-3">(613) 591-9100</a>
-          <a href="mailto:gcl@graebeck.com" class="block text-gray-400 hover:text-gold transition-colors font-inter text-sm">gcl@graebeck.com</a>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs font-inter">
-        <span>&copy; 2025 Graebeck Construction Ltd. All rights reserved.</span>
-        <span>North Gower, ON &nbsp;·&nbsp; (613) 591-9100</span>
-      </div>
-    </div>
-  </footer>
 
+          <div data-reveal data-delay="120">
+            <h2 id="gc-heading" class="heading-section text-onyx text-3xl mb-3">General Contracting</h2>
+            <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">Affordable &amp; Effective Contracting</p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-4">
+              Graebeck provides general contracting services leveraging over 20 years of operational
+              experience in the National Capital Region. We offer lump sum tendering, guaranteed upset
+              pricing, and competitive cost plus fee arrangements — ensuring value delivery regardless
+              of project scope.
+            </p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-6">
+              Our approach places a senior superintendent on-site from mobilisation through substantial
+              completion. Rigorous sub-trade management, daily site reporting, and proactive issue
+              resolution are standard on every project we build.
+            </p>
+            <ul class="space-y-2 mb-8" role="list">
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Lump Sum Tendering</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Guaranteed Upset Pricing</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Competitive Cost Plus Fee Arrangements</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Federal &amp; Institutional Procurement Expertise</li>
+            </ul>
+            <a href="projects.html" class="btn-dark inline-flex">See Our Projects</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONSTRUCTION MANAGEMENT ─────────────────────────────────────── -->
+    <section id="construction-management" style="background:#ffffff;" class="py-24" aria-labelledby="cm-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div class="order-2 lg:order-1" data-reveal data-delay="120">
+            <h2 id="cm-heading" class="heading-section text-onyx text-3xl mb-3">Construction Management</h2>
+            <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">Overseeing Your Project's Success</p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-4">
+              Drawing on extensive construction experience in Ottawa, Graebeck provides comprehensive
+              construction management services spanning preliminary budgeting, constructability analysis,
+              value engineering, detailed scheduling, and sub-trade tendering — all aligned from earliest
+              planning stages through final commissioning.
+            </p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-6">
+              Our construction managers serve as your on-site authority: directing trades, managing quality
+              control, and providing transparent cost and schedule reporting throughout every phase of delivery.
+            </p>
+            <ul class="space-y-2 mb-8" role="list">
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Preliminary Budgeting &amp; Estimating</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Constructability Analysis</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Value Engineering &amp; Scheduling</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Sub-Trade Coordination &amp; Tendering</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Quality Control &amp; Commissioning</li>
+            </ul>
+            <a href="projects.html" class="btn-dark inline-flex">See Our Projects</a>
+          </div>
+
+          <div class="order-1 lg:order-2" data-reveal>
+            <img src="images/projects/commissionaires.jpg"
+                 alt="Commissionaires Ottawa — Construction Management" class="w-full h-80 object-cover" loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECT MANAGEMENT ───────────────────────────────────────────── -->
+    <section id="project-management" class="py-24 bg-cool" aria-labelledby="pm-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div data-reveal>
+            <img src="images/projects/cd-howe-building.jpg"
+                 alt="C.D. Howe Building — Project Management" class="w-full h-80 object-cover" loading="lazy" />
+          </div>
+
+          <div data-reveal data-delay="120">
+            <h2 id="pm-heading" class="heading-section text-onyx text-3xl mb-3">Project Management</h2>
+            <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">Exceeding Your Expectations</p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-4">
+              Graebeck's project managers and coordinators offer a comprehensive suite of owner's
+              representative services: project programming, site selection, feasibility studies,
+              design development, budgeting, value engineering, tendering, and construction supervision.
+            </p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-6">
+              We act as your dedicated advocate throughout the project lifecycle — protecting your
+              interests, managing your schedule, and holding your budget accountable through quality
+              control, commissioning, and move management.
+            </p>
+            <ul class="space-y-2 mb-8" role="list">
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Project Programming &amp; Feasibility Studies</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Site Selection &amp; Design Development</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Budget Control &amp; Transparent Reporting</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Construction Supervision &amp; Quality Control</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Commissioning &amp; Move Management</li>
+            </ul>
+            <a href="projects.html" class="btn-dark inline-flex">See Our Projects</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DESIGN BUILD ──────────────────────────────────────────────────── -->
+    <section id="design-build" style="background:#ffffff;" class="py-24" aria-labelledby="db-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div class="order-2 lg:order-1" data-reveal data-delay="120">
+            <h2 id="db-heading" class="heading-section text-onyx text-3xl mb-3">Design Build</h2>
+            <p class="font-montserrat font-semibold text-forest text-base mb-5" style="letter-spacing:0.02em;">From Concept to Completion</p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-4">
+              Graebeck's design-build service delivers a fully integrated solution from project
+              inception through to occupancy. A single point of accountability spans site selection,
+              outline specifications, design development, construction, fit-out, and commissioning —
+              streamlining the process and reducing risk for the owner.
+            </p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-6">
+              By combining design and construction responsibility under one contract, design-build
+              shortens project timelines, enables early cost certainty, and fosters collaboration
+              between the design team and trades from day one.
+            </p>
+            <ul class="space-y-2 mb-8" role="list">
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Site Selection &amp; Outline Specifications</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Integrated Design Development</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Single Point of Accountability</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Accelerated Project Delivery</li>
+              <li class="flex items-center gap-3 font-inter text-sm text-gray-600"><span class="w-2 h-2 bg-forest rounded-full flex-shrink-0" aria-hidden="true"></span>Fit-Out &amp; Commissioning</li>
+            </ul>
+            <a href="contact.html" class="btn-dark inline-flex">Discuss Your Project</a>
+          </div>
+
+          <div class="order-1 lg:order-2" data-reveal>
+            <img src="images/projects/beau-roc.png"
+                 alt="Les Ateliers Beau-Roc — Design Build" class="w-full h-80 object-cover" loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section py-24" aria-labelledby="services-cta-heading">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <h2 id="services-cta-heading" class="heading-section text-white text-3xl mb-4">Ready to Get Started?</h2>
+        <p class="text-gray-400 font-inter mb-8">Tell us about your project and we'll schedule a no-obligation consultation.</p>
+        <div class="flex flex-wrap gap-5 justify-center">
+          <a href="contact.html"   class="btn-primary">Contact Us</a>
+          <a href="tel:6135919100" class="btn-outline">Call (613) 591-9100</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,141 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C.D. Howe Building — Graebeck Construction Ltd.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="description" content="Four-phase LEED Silver modernization of three concourse levels at the C.D. Howe Building, 240 Sparks Street — delivered in a fully occupied federal office building." />
+
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://www.graebeck.com/projects/project-commercial.html" />
+  <meta property="og:title"       content="C.D. Howe Building — Graebeck Construction Ltd." />
+  <meta property="og:description" content="LEED Silver concourse modernization at Ottawa's iconic C.D. Howe Building — four phases, zero tenant disruption." />
+  <meta property="og:image"       content="https://www.graebeck.com/images/projects/cd-howe-building.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="canonical" href="https://www.graebeck.com/projects/project-commercial.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{onyx:'#1A1A1A',forest:'#227750','forest-dark':'#1a5c3a',cool:'#F4F4F9',gold:'#005193','gold-light':'#0066b8'},fontFamily:{montserrat:['Montserrat','sans-serif'],inter:['Inter','sans-serif']}}}}</script>
+  <script src="../js/tailwind-config.js"></script>
   <link rel="stylesheet" href="../css/custom.css" />
 </head>
 <body class="bg-cool text-onyx">
-  <nav id="navbar" class="fixed top-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="flex items-center justify-between h-20">
-      <a href="../index.html" class="nav-logo flex items-center gap-3 no-underline"><img src="../images/logo.png" alt="Graebeck Construction Ltd." style="height:48px;width:auto;display:block;" /></a>
-      <div class="hidden md:flex items-center gap-10 ml-8 lg:ml-12"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="../services.html" class="nav-link">Services</a><a href="../about.html" class="nav-link">About</a><a href="../contact.html" class="btn-primary" style="padding:12px 24px;font-size:0.72rem;">Get a Quote</a></div>
-      <button id="hamburger" class="hamburger md:hidden" aria-label="Open navigation" aria-controls="nav-overlay" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div></div>
-  </nav>
 
-  <!-- Full-screen nav overlay -->
-  <div id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
-    <div class="overlay-header">
-      <a href="../index.html" class="overlay-logo">
-        <img src="../images/logo-footer.png" alt="Graebeck Construction Ltd." />
-      </a>
-      <button id="overlay-close" class="overlay-close" aria-label="Close navigation">&times;</button>
-    </div>
-    <nav class="overlay-nav">
-      <a href="../index.html"    class="overlay-link">Home</a>
-      <a href="../projects.html" class="overlay-link active-page">Projects</a>
-      <a href="../services.html" class="overlay-link">Services</a>
-      <a href="../about.html"    class="overlay-link">About</a>
-      <a href="../contact.html"  class="overlay-cta">Get a Quote <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </nav>
-    <div class="overlay-footer">
-      <span class="overlay-tagline">Graebeck Construction Ltd.</span>
-      <span class="overlay-tagline">Ottawa, ON &mdash; Est. 2000</span>
-    </div>
-  </div>
+  <div id="site-nav"></div>
 
-  <div class="pt-20">
-    <div style="position:relative;overflow:hidden;">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="C.D. Howe Building" class="project-hero-img" />
-      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(26,26,26,0.7) 100%);"></div>
-      <div style="position:absolute;bottom:32px;left:0;right:0;"><div class="max-w-7xl mx-auto px-6 lg:px-8"><nav class="flex items-center gap-2 text-sm font-inter text-gray-300"><a href="../index.html" class="hover:text-gold transition-colors">Home</a><span class="text-gray-500">/</span><a href="../projects.html" class="hover:text-gold transition-colors">Projects</a><span class="text-gray-500">/</span><span class="text-white">C.D. Howe Building</span></nav></div></div>
-    </div>
-  </div>
+  <main>
 
-  <section class="py-20 bg-cool">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
-        <div class="lg:col-span-2">
-          <span class="project-card-tag inline-block mb-4" style="background:#1a5c3a;">Commercial</span>
-          <h1 class="heading-display text-onyx mb-3" style="font-size:clamp(2rem,4vw,3rem);">C.D. Howe Building<br/><span style="font-size:0.7em;color:#227750;">LEED Silver</span></h1>
-          <div class="gold-divider"></div>
-          <div class="font-inter text-gray-600 leading-relaxed space-y-5 mt-6">
-            <p class="text-lg text-gray-700">
-              The C.D. Howe Building at 240 Sparks Street is one of Ottawa's iconic federal office
-              buildings. Graebeck Construction undertook the complete modernization of three
-              concourse commercial levels — a complex, multi-phase renovation executed in an
-              occupied, operational multi-use building.
-            </p>
-            <p>
-              The project was delivered across four carefully phased packages, allowing the building
-              to remain open to tenants and the public throughout construction. Significant new
-              elements included new stairwells improving vertical circulation, upgraded building
-              entrances and storefronts refreshing the Sparks Street presence, and a signature
-              water wall feature — a prominent architectural element in the renovated concourse.
-            </p>
-            <p>
-              The modernization was designed and built to meet LEED Silver certification — one
-              of the earlier major federal office LEED projects in the NCR. Graebeck's team
-              maintained detailed material tracking, waste diversion documentation, and
-              low-VOC material specifications throughout to support the LEED submission.
-            </p>
-            <p>
-              Coordinating four consecutive phases in an occupied federal building required
-              exceptional logistics: tenant communication plans, access route management,
-              dust and noise mitigation, and daily scheduling coordination with building
-              management to protect the tenant experience at all times.
-            </p>
+    <!-- HERO IMAGE -->
+    <div class="pt-20">
+      <div style="position:relative;overflow:hidden;">
+        <img src="../images/projects/cd-howe-building.jpg" alt="C.D. Howe Building interior" class="project-hero-img" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(26,26,26,0.7) 100%);" aria-hidden="true"></div>
+        <div style="position:absolute;bottom:32px;left:0;right:0;">
+          <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm font-inter text-gray-300">
+              <a href="../index.html" class="hover:text-gold transition-colors">Home</a><span class="text-gray-500" aria-hidden="true">/</span>
+              <a href="../projects.html" class="hover:text-gold transition-colors">Projects</a><span class="text-gray-500" aria-hidden="true">/</span>
+              <span class="text-white" aria-current="page">C.D. Howe Building</span>
+            </nav>
           </div>
-          <div class="mt-12">
-            <div class="grid grid-cols-3 gap-4 mb-10">
-              <div class="bg-white border border-gray-200 p-5 text-center"><div class="font-montserrat font-black text-3xl text-gold">3</div><div class="text-xs font-montserrat font-bold tracking-wider text-gray-500 uppercase mt-1">Concourse Levels</div></div>
-              <div class="bg-white border border-gray-200 p-5 text-center"><div class="font-montserrat font-black text-3xl text-gold">4</div><div class="text-xs font-montserrat font-bold tracking-wider text-gray-500 uppercase mt-1">Phases</div></div>
-              <div class="bg-white border border-gray-200 p-5 text-center"><div class="font-montserrat font-black text-2xl text-forest">Silver</div><div class="text-xs font-montserrat font-bold tracking-wider text-gray-500 uppercase mt-1">LEED Certified</div></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-20 bg-cool">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+
+          <article class="lg:col-span-2">
+            <span class="project-card-tag inline-block mb-4" style="background:#1a5c3a;">Commercial</span>
+            <h1 class="heading-display text-onyx mb-3" style="font-size:clamp(2rem,4vw,3rem);">C.D. Howe Building<br/><span style="font-size:0.7em;color:#227750;">LEED Silver</span></h1>
+            <div class="gold-divider"></div>
+
+            <div class="font-inter text-gray-600 leading-relaxed space-y-5 mt-6">
+              <p class="text-lg text-gray-700">
+                The C.D. Howe Building at 240 Sparks Street is one of Ottawa's iconic federal office
+                buildings. Graebeck Construction undertook the complete modernization of three
+                concourse commercial levels — a complex, multi-phase renovation executed in an
+                occupied, operational multi-use building.
+              </p>
+              <p>
+                The project was delivered across four carefully phased packages, allowing the building
+                to remain open to tenants and the public throughout construction. Significant new
+                elements included new stairwells improving vertical circulation, upgraded building
+                entrances and storefronts refreshing the Sparks Street presence, and a signature
+                water wall feature — a prominent architectural element in the renovated concourse.
+              </p>
+              <p>
+                The modernization was designed and built to meet LEED Silver certification — one
+                of the earlier major federal office LEED projects in the NCR. Graebeck's team
+                maintained detailed material tracking, waste diversion documentation, and
+                low-VOC material specifications throughout to support the LEED submission.
+              </p>
+              <p>
+                Coordinating four consecutive phases in an occupied federal building required
+                exceptional logistics: tenant communication plans, access route management,
+                dust and noise mitigation, and daily scheduling coordination with building
+                management to protect the tenant experience at all times.
+              </p>
             </div>
-            <h2 class="heading-section text-onyx text-2xl mb-6">Delivery Highlights</h2>
-            <div class="space-y-5">
-              <div class="flex gap-4 p-5 bg-white border border-gray-200">
-                <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
-                <div><h3 class="font-montserrat font-bold text-onyx text-sm mb-1">Occupied Building — Zero Tenant Disruption</h3><p class="text-gray-500 font-inter text-sm leading-relaxed">Four sequential phases allowed the federal building to remain fully operational throughout the entire renovation. Tenant communication and logistics planning were managed daily by Graebeck's site team.</p></div>
+
+            <div class="mt-12">
+              <div class="grid grid-cols-3 gap-4 mb-10">
+                <div class="bg-white border border-gray-200 p-5 text-center"><div class="font-montserrat font-black text-3xl text-gold">3</div><div class="text-xs font-montserrat font-bold tracking-wider text-gray-500 uppercase mt-1">Concourse Levels</div></div>
+                <div class="bg-white border border-gray-200 p-5 text-center"><div class="font-montserrat font-black text-3xl text-gold">4</div><div class="text-xs font-montserrat font-bold tracking-wider text-gray-500 uppercase mt-1">Phases</div></div>
+                <div class="bg-white border border-gray-200 p-5 text-center"><div class="font-montserrat font-black text-2xl text-forest">Silver</div><div class="text-xs font-montserrat font-bold tracking-wider text-gray-500 uppercase mt-1">LEED Certified</div></div>
               </div>
-              <div class="flex gap-4 p-5 bg-white border border-gray-200">
-                <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
-                <div><h3 class="font-montserrat font-bold text-onyx text-sm mb-1">LEED Silver Certification</h3><p class="text-gray-500 font-inter text-sm leading-relaxed">Comprehensive material documentation, waste diversion tracking, and low-VOC specifications supported a successful LEED Silver certification for this landmark federal renovation.</p></div>
+
+              <h2 class="heading-section text-onyx text-2xl mb-6">Delivery Highlights</h2>
+              <div class="space-y-5">
+                <div class="flex gap-4 p-5 bg-white border border-gray-200">
+                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="font-montserrat font-bold text-onyx text-sm mb-1">Occupied Building — Zero Tenant Disruption</h3>
+                    <p class="text-gray-500 font-inter text-sm leading-relaxed">Four sequential phases allowed the federal building to remain fully operational throughout the entire renovation. Tenant communication and logistics planning were managed daily by Graebeck's site team.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 p-5 bg-white border border-gray-200">
+                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="font-montserrat font-bold text-onyx text-sm mb-1">LEED Silver Certification</h3>
+                    <p class="text-gray-500 font-inter text-sm leading-relaxed">Comprehensive material documentation, waste diversion tracking, and low-VOC specifications supported a successful LEED Silver certification for this landmark federal renovation.</p>
+                  </div>
+                </div>
               </div>
             </div>
+          </article>
+
+          <aside class="lg:col-span-1">
+            <div class="bg-white border border-gray-200 p-8 sticky top-28">
+              <h3 class="font-montserrat font-bold text-onyx text-sm tracking-widest uppercase mb-2">Project Details</h3>
+              <div class="gold-divider" style="margin-bottom:0;"></div>
+              <dl>
+                <div class="project-meta-item mt-4"><dt class="project-meta-label">Client</dt><dd class="font-inter text-onyx text-sm font-medium">Public Services &amp; Procurement Canada</dd></div>
+                <div class="project-meta-item"><dt class="project-meta-label">Location</dt><dd class="font-inter text-onyx text-sm font-medium">240 Sparks Street, Ottawa, ON&nbsp; K1A 0X8</dd></div>
+                <div class="project-meta-item"><dt class="project-meta-label">Category</dt><dd class="font-inter text-onyx text-sm font-medium">Commercial Renovation</dd></div>
+                <div class="project-meta-item"><dt class="project-meta-label">Certification</dt><dd class="font-inter text-onyx text-sm font-medium">LEED Silver</dd></div>
+                <div class="project-meta-item"><dt class="project-meta-label">Scope</dt><dd class="font-inter text-onyx text-sm font-medium">3-Level Concourse Modernization, New Stairwells, Entrances, Storefronts, Water Wall Feature</dd></div>
+                <div class="project-meta-item" style="border-bottom:none;"><dt class="project-meta-label">Phasing</dt><dd class="font-inter text-onyx text-sm font-medium">4 Phases — Occupied Building</dd></div>
+              </dl>
+              <a href="../contact.html" class="btn-primary w-full justify-center mt-8" style="padding:14px;">Start a Similar Project</a>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Gallery -->
+        <div class="mt-20">
+          <h2 class="heading-section text-onyx text-2xl mb-8">Project Gallery</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div class="gallery-thumb" data-lightbox="../images/projects/cd-howe-building.jpg">
+              <img src="../images/projects/cd-howe-building.jpg" alt="CD Howe Interior" loading="lazy" />
+            </div>
+          </div>
+          <p class="text-gray-400 font-inter text-xs mt-3">Click any image to enlarge &nbsp;&middot;&nbsp; Use arrow keys to navigate</p>
+        </div>
+
+        <!-- More Projects -->
+        <div class="mt-20 pt-16 border-t border-gray-200">
+          <div class="flex items-center justify-between mb-10">
+            <h2 class="heading-section text-onyx text-2xl">More Projects</h2>
+            <a href="../projects.html" class="text-forest font-montserrat font-bold text-xs tracking-wider uppercase hover:underline">View All →</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="project-card" style="height:240px;"><img src="../images/projects/beau-roc.png" alt="Les Ateliers Beau-Roc" loading="lazy"/><div class="project-card-overlay" aria-hidden="true"></div><div class="project-card-content"><span class="project-card-tag" style="background:#4a5568;">Industrial</span><h3 class="font-montserrat font-bold text-white text-lg">Les Ateliers Beau-Roc</h3></div><a href="project-beau-roc.html" class="absolute inset-0" aria-label="View Les Ateliers Beau-Roc project"></a></div>
+            <div class="project-card" style="height:240px;"><img src="../images/projects/almonte-hospital.jpg" alt="Almonte Hospital" loading="lazy"/><div class="project-card-overlay" aria-hidden="true"></div><div class="project-card-content"><span class="project-card-tag">Institutional</span><h3 class="font-montserrat font-bold text-white text-lg">Almonte Hospital</h3></div><a href="project-hospital.html" class="absolute inset-0" aria-label="View Almonte Hospital project"></a></div>
+            <div class="project-card" style="height:240px;"><img src="../images/projects/parliament-hill.jpg" alt="Parliament Hill West Slope" loading="lazy"/><div class="project-card-overlay" aria-hidden="true"></div><div class="project-card-content"><span class="project-card-tag" style="background:#8B5E3C;">Historical</span><h3 class="font-montserrat font-bold text-white text-lg">Parliament Hill</h3></div><a href="project-parliament.html" class="absolute inset-0" aria-label="View Parliament Hill project"></a></div>
           </div>
         </div>
-
-        <div class="lg:col-span-1">
-          <div class="bg-white border border-gray-200 p-8 sticky top-28">
-            <h3 class="font-montserrat font-bold text-onyx text-sm tracking-widest uppercase mb-2">Project Details</h3>
-            <div class="gold-divider" style="margin-bottom:0;"></div>
-            <div class="project-meta-item mt-4"><div class="project-meta-label">Location</div><div class="font-inter text-onyx text-sm font-medium">240 Sparks Street, Ottawa, ON &nbsp;K1A 0X8</div></div>
-            <div class="project-meta-item"><div class="project-meta-label">Category</div><div class="font-inter text-onyx text-sm font-medium">Commercial Renovation</div></div>
-            <div class="project-meta-item"><div class="project-meta-label">Certification</div><div class="font-inter text-onyx text-sm font-medium">LEED Silver</div></div>
-            <div class="project-meta-item"><div class="project-meta-label">Scope</div><div class="font-inter text-onyx text-sm font-medium">3-Level Concourse Modernization, New Stairwells, Entrances, Storefronts, Water Wall Feature</div></div>
-            <div class="project-meta-item"><div class="project-meta-label">Phasing</div><div class="font-inter text-onyx text-sm font-medium">4 Phases — Occupied Building</div></div>
-            <div class="project-meta-item" style="border-bottom:none;"><div class="project-meta-label">Client</div><div class="font-inter text-onyx text-sm font-medium">Public Services & Procurement Canada</div></div>
-            <a href="../contact.html" class="btn-primary w-full justify-center mt-8" style="padding:14px;">Start a Similar Project</a>
-          </div>
-        </div>
       </div>
+    </section>
 
-      <div class="mt-20">
-        <h2 class="heading-section text-onyx text-2xl mb-8">Project Gallery</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          <div class="gallery-thumb" data-lightbox="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="CD Howe Interior" loading="lazy"/></div>
-        </div>
-        <p class="text-gray-400 font-inter text-xs mt-3">Click any image to enlarge &nbsp;·&nbsp; Use arrow keys to navigate</p>
-      </div>
+  </main>
 
-      <div class="mt-20 pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-between mb-10"><h2 class="heading-section text-onyx text-2xl">More Projects</h2><a href="../projects.html" class="text-forest font-montserrat font-bold text-xs tracking-wider uppercase hover:underline">View All →</a></div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div class="project-card" style="height:240px;"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80" alt="Beau-roc" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-content"><span class="project-card-tag" style="background:#1a5c3a;">Commercial</span><h3 class="font-montserrat font-bold text-white text-lg">Beau-roc Industrial</h3></div><a href="project-beau-roc.html" class="absolute inset-0"></a></div>
-          <div class="project-card" style="height:240px;"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Hospital" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-content"><span class="project-card-tag">Institutional</span><h3 class="font-montserrat font-bold text-white text-lg">Almonte Hospital</h3></div><a href="project-hospital.html" class="absolute inset-0"></a></div>
-          <div class="project-card" style="height:240px;"><img src="https://images.unsplash.com/photo-1541874172-b40a7b99c1d0?w=600&q=80" alt="Parliament" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-content"><span class="project-card-tag" style="background:#8B5E3C;">Historical</span><h3 class="font-montserrat font-bold text-white text-lg">Parliament Hill</h3></div><a href="project-parliament.html" class="absolute inset-0" aria-label="Parliament Hill"></a></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div id="site-footer"></div>
 
-  <footer class="site-footer"><div class="max-w-7xl mx-auto px-6 lg:px-8 py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"><div><div class="flex items-center gap-3 mb-5"><img src="../images/logo-footer.png" alt="Graebeck Construction Ltd." style="height:40px;width:auto;display:block;" /></div><p class="text-gray-500 text-sm font-inter leading-relaxed">Building the National Capital Region's most trusted structures since 2000.</p></div><div><h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Navigation</h4><nav class="flex flex-col"><a href="../index.html" class="footer-link">Home</a><a href="../projects.html" class="footer-link">Projects</a><a href="../services.html" class="footer-link">Services</a><a href="../about.html" class="footer-link">About Us</a><a href="../contact.html" class="footer-link">Contact</a></nav></div><div><h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Services</h4><nav class="flex flex-col"><a href="../services.html#general-contracting" class="footer-link">General Contracting</a><a href="../services.html#construction-management" class="footer-link">Construction Management</a><a href="../services.html#project-management" class="footer-link">Project Management</a><a href="../services.html#design-build" class="footer-link">Design Build</a></nav></div><div><h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Contact Us</h4><address class="not-italic text-gray-500 font-inter text-sm leading-loose">6361 Fourth Line Road<br/>North Gower, ON &nbsp;K0A 2T0</address><a href="tel:6135919100" class="block text-gray-400 hover:text-gold transition-colors font-inter text-sm mt-3">(613) 591-9100</a><a href="mailto:gcl@graebeck.com" class="block text-gray-400 hover:text-gold transition-colors font-inter text-sm">gcl@graebeck.com</a></div></div><div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs font-inter"><span>&copy; 2025 Graebeck Construction Ltd. All rights reserved.</span><span>North Gower, ON &nbsp;·&nbsp; (613) 591-9100</span></div></div></footer>
+  <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
