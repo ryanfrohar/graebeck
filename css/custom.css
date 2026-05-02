@@ -168,7 +168,7 @@ body.page-home .nav-logo img {
   text-transform: uppercase;
   color: var(--forest);
 }
-.label-overline.light { color: var(--gold); }
+.label-overline.light { color: #fff; }
 
 /* ── Buttons ── */
 .btn-primary {
