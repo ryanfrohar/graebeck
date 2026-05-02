@@ -111,19 +111,6 @@
       counters.forEach(el => observer.observe(el));
     }
 
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('[data-reveal]');
-    if (revealEls.length) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          observer.unobserve(entry.target);
-          const delay = Number(entry.target.getAttribute('data-delay') || 0);
-          setTimeout(() => entry.target.classList.add('revealed'), delay);
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-      revealEls.forEach(el => observer.observe(el));
-    }
   }
 
   function animateCounter(el) {
