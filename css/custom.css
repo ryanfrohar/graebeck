@@ -168,7 +168,7 @@ body.page-home .nav-logo img {
   text-transform: uppercase;
   color: var(--forest);
 }
-.label-overline.light { color: var(--gold); }
+.label-overline.light { color: #fff; }
 
 /* ── Buttons ── */
 .btn-primary {
@@ -296,8 +296,8 @@ body.page-home .nav-logo img {
   position: absolute;
   top: 24px; right: 24px;
   width: 40px; height: 40px;
-  background: var(--gold);
-  color: var(--onyx);
+  background: var(--forest);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -477,12 +477,7 @@ body.page-home .nav-logo img {
 .gold-divider { width: 60px; height: 3px; background: var(--gold); margin: 16px 0 24px; }
 
 /* ── Scroll Reveal ── */
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-[data-reveal].revealed { opacity: 1; transform: translateY(0); }
+[data-reveal] { opacity: 1; transform: none; }
 
 /* ── Lightbox ── */
 #lightbox #lb-backdrop {
@@ -691,5 +686,4 @@ body.page-home .nav-logo img {
   }
   html { scroll-behavior: auto; }
   .page-hero-bg { transform: none; transition: none; }
-  [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
