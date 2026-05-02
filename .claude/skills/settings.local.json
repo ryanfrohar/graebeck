@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/ryanfrohar/Documents/git/graebeck branch -a)",
+      "Bash(git -C /Users/ryanfrohar/Documents/git/graebeck add js/main.js)",
+      "Bash(git -C /Users/ryanfrohar/Documents/git/graebeck commit -m ' *)",
+      "Bash(mkdir -p /tmp/graebeck-site/.claude)",
+      "Bash(cp /Users/ryanfrohar/Documents/git/graebeck/*.html /tmp/graebeck-site/)",
+      "Bash(cp -r /Users/ryanfrohar/Documents/git/graebeck/css/ /Users/ryanfrohar/Documents/git/graebeck/images/ /Users/ryanfrohar/Documents/git/graebeck/js/ /Users/ryanfrohar/Documents/git/graebeck/projects/ /tmp/graebeck-site/)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(open http://localhost:4200/services.html)",
+      "Bash(cp -r /Users/ryanfrohar/Documents/git/graebeck/css /tmp/graebeck-site/css)",
+      "Bash(cp -r /Users/ryanfrohar/Documents/git/graebeck/js /tmp/graebeck-site/js)",
+      "Read(//private/tmp/graebeck-site/**)"
+    ]
+  }
+}
