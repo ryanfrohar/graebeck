@@ -51,6 +51,41 @@ This prevents the "1 commit behind" drift on GitHub. Always run this after a pro
 
 ---
 
+## Local Preview Setup
+
+This is a static site (no build step). To preview locally:
+
+1. Copy **all** site assets to `/tmp/graebeck-site` (avoids macOS sandbox permission errors in worktrees). Each directory must be copied explicitly — glob patterns silently skip subdirectories:
+```bash
+mkdir -p /tmp/graebeck-site/.claude
+cp /Users/ryanfrohar/Documents/git/graebeck/*.html /tmp/graebeck-site/
+cp -r /Users/ryanfrohar/Documents/git/graebeck/css   /tmp/graebeck-site/css
+cp -r /Users/ryanfrohar/Documents/git/graebeck/js    /tmp/graebeck-site/js
+cp -r /Users/ryanfrohar/Documents/git/graebeck/images /tmp/graebeck-site/images
+cp -r /Users/ryanfrohar/Documents/git/graebeck/projects /tmp/graebeck-site/projects
+```
+
+2. `.claude/launch.json` is already committed in the repo — no need to recreate it. Use `preview_start` with name `"graebeck"`.
+
+3. After every HTML/CSS/JS edit, re-sync before taking screenshots:
+```bash
+cp /Users/ryanfrohar/Documents/git/graebeck/*.html /tmp/graebeck-site/
+cp -r /Users/ryanfrohar/Documents/git/graebeck/css    /tmp/graebeck-site/css
+cp -r /Users/ryanfrohar/Documents/git/graebeck/js     /tmp/graebeck-site/js
+cp -r /Users/ryanfrohar/Documents/git/graebeck/images /tmp/graebeck-site/images
+cp -r /Users/ryanfrohar/Documents/git/graebeck/projects /tmp/graebeck-site/projects
+```
+
+4. Call `preview_resize` with `preset: "desktop"` before screenshotting — the panel defaults to ~787px (tablet) and won't show the full desktop layout.
+
+5. Navigate to the target page with `preview_eval`: `location.assign('http://localhost:4200/services.html')`
+
+6. Call `location.reload()` via `preview_eval` after syncing files so the browser picks up changes.
+
+**Important:** `css/custom.css` must be present or the site renders unstyled. Always verify it copied with `ls /tmp/graebeck-site/css/` before screenshotting.
+
+---
+
 ## GitHub Actions Workflows
 
 | File | Trigger | Purpose |
