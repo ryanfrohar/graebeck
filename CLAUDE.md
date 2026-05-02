@@ -55,34 +55,50 @@ This prevents the "1 commit behind" drift on GitHub. Always run this after a pro
 
 This is a static site (no build step). To preview locally:
 
-1. Copy **all** site assets to `/tmp/graebeck-site` (avoids macOS sandbox permission errors in worktrees). Each directory must be copied explicitly — glob patterns silently skip subdirectories:
+### One-time setup (per machine)
+
+1. Create the server script at `/tmp/serve.py` — this is the only server approach that works around macOS sandbox restrictions:
+```python
+import os, http.server, socketserver
+os.chdir('/tmp/graebeck-site')
+port = int(os.environ.get('PORT', 4200))
+with socketserver.TCPServer(("", port), http.server.SimpleHTTPRequestHandler) as httpd:
+    httpd.serve_forever()
+```
+
+2. `.claude/launch.json` is committed in the repo and already points to `/tmp/serve.py` — no changes needed.
+
+### Every session
+
+3. Sync all site assets to `/tmp/graebeck-site`. Copy each directory explicitly — globs silently skip subdirectories:
 ```bash
 mkdir -p /tmp/graebeck-site/.claude
 cp /Users/ryanfrohar/Documents/git/graebeck/*.html /tmp/graebeck-site/
-cp -r /Users/ryanfrohar/Documents/git/graebeck/css   /tmp/graebeck-site/css
-cp -r /Users/ryanfrohar/Documents/git/graebeck/js    /tmp/graebeck-site/js
-cp -r /Users/ryanfrohar/Documents/git/graebeck/images /tmp/graebeck-site/images
+cp /Users/ryanfrohar/Documents/git/graebeck/css/custom.css /tmp/graebeck-site/css/custom.css
+cp -r /Users/ryanfrohar/Documents/git/graebeck/js       /tmp/graebeck-site/js
+cp -r /Users/ryanfrohar/Documents/git/graebeck/images   /tmp/graebeck-site/images
 cp -r /Users/ryanfrohar/Documents/git/graebeck/projects /tmp/graebeck-site/projects
 ```
 
-2. `.claude/launch.json` is already committed in the repo — no need to recreate it. Use `preview_start` with name `"graebeck"`.
+4. Call `preview_start` with name `"graebeck"`. The tool manages the process.
 
-3. After every HTML/CSS/JS edit, re-sync before taking screenshots:
+5. Navigate with `preview_eval`: `location.assign('http://localhost:4200/index.html')`
+
+6. Call `preview_resize` with `preset: "mobile"` or `"desktop"` before screenshotting.
+
+### After every edit
+
+7. Re-sync the changed files (always copy `custom.css` explicitly — `cp -r css/` can silently serve a stale cached version):
 ```bash
 cp /Users/ryanfrohar/Documents/git/graebeck/*.html /tmp/graebeck-site/
-cp -r /Users/ryanfrohar/Documents/git/graebeck/css    /tmp/graebeck-site/css
-cp -r /Users/ryanfrohar/Documents/git/graebeck/js     /tmp/graebeck-site/js
-cp -r /Users/ryanfrohar/Documents/git/graebeck/images /tmp/graebeck-site/images
+cp /Users/ryanfrohar/Documents/git/graebeck/css/custom.css /tmp/graebeck-site/css/custom.css
+cp -r /Users/ryanfrohar/Documents/git/graebeck/js       /tmp/graebeck-site/js
 cp -r /Users/ryanfrohar/Documents/git/graebeck/projects /tmp/graebeck-site/projects
 ```
 
-4. Call `preview_resize` with `preset: "desktop"` before screenshotting — the panel defaults to ~787px (tablet) and won't show the full desktop layout.
+8. Then `location.reload()` via `preview_eval` so the browser picks up changes.
 
-5. Navigate to the target page with `preview_eval`: `location.assign('http://localhost:4200/services.html')`
-
-6. Call `location.reload()` via `preview_eval` after syncing files so the browser picks up changes.
-
-**Important:** `css/custom.css` must be present or the site renders unstyled. Always verify it copied with `ls /tmp/graebeck-site/css/` before screenshotting.
+**Important:** Never use `npx serve` — there is no Node.js on this machine. Always use the `/tmp/serve.py` approach above.
 
 ---
 
