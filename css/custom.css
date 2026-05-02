@@ -309,7 +309,7 @@ body.page-home .nav-logo img {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 3rem;
-  color: var(--gold);
+  color: #ffffff;
   line-height: 1;
   display: block;
 }
@@ -317,7 +317,7 @@ body.page-home .nav-logo img {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 2rem;
-  color: var(--gold);
+  color: #ffffff;
 }
 .stat-label {
   font-family: 'Inter', sans-serif;
@@ -592,7 +592,7 @@ body.page-home .nav-logo img {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 3rem;
-  color: rgba(0,81,147,0.2);
+  color: rgba(255,255,255,0.15);
   line-height: 1;
   min-width: 64px;
   transition: color 0.3s;
@@ -666,8 +666,12 @@ body.page-home .nav-logo img {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
+  padding-top: 0;
 }
-#mobile-menu.open { max-height: 400px; }
+#mobile-menu.open {
+  max-height: 400px;
+  padding-top: 24px;
+}
 .mobile-nav-link {
   display: block;
   font-family: 'Montserrat', sans-serif;
