@@ -1,3 +1,4 @@
+/* global tailwind */
 tailwind.config = {
   theme: {
     extend: {
