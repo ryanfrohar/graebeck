@@ -27,14 +27,18 @@ body {
 
 /* ── Navbar ── */
 #navbar {
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, background 0.3s ease;
   position: relative;
+  border-bottom: 1px solid rgba(0, 81, 147, 0.1);
 }
 #navbar.nav-scrolled {
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.98) !important;
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 81, 147, 0.2);
 }
 /* Logo sits directly on gold gradient — no dark backing */
 .nav-logo {
@@ -101,7 +105,7 @@ body.page-home .nav-logo img {
   text-decoration: none;
   position: relative;
   padding-bottom: 4px;
-  transition: color 0.2s;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 .nav-link::after {
   content: '';
@@ -113,10 +117,21 @@ body.page-home .nav-logo img {
   background: #005193;
   transition: width 0.3s ease;
 }
-.nav-link:hover::after,
-.nav-link.active::after { width: 100%; }
-.nav-link:hover { color: #005193; }
-.nav-link.active { color: #005193; }
+.nav-link:hover {
+  color: #0066b8;
+  transform: translateY(-1px);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: #005193;
+  font-weight: 700;
+}
+.nav-link.active::after {
+  width: 100%;
+  background: #0066b8;
+}
 
 /* ── Hero ── */
 .hero-section {
@@ -650,12 +665,30 @@ body.page-home .nav-logo img {
 .hamburger {
   display: flex; flex-direction: column;
   gap: 5px; cursor: pointer; padding: 4px;
+  transition: transform 0.3s ease;
 }
 .hamburger span {
   display: block;
   width: 26px; height: 2px;
   background: #005193;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, width 0.3s;
   transition: transform 0.3s, opacity 0.3s, width 0.3s;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+/* Hamburger active state (X icon) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  -webkit-transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  -webkit-transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* ── Full-screen nav overlay ── */
