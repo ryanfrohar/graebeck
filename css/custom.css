@@ -297,7 +297,7 @@ body.page-home .nav-logo img {
   top: 24px; right: 24px;
   width: 40px; height: 40px;
   background: var(--forest);
-  color: var(--onyx);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
