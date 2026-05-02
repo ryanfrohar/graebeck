@@ -5,55 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Graebeck Construction Ltd. — Ottawa's Trusted Builder</title>
   <meta name="description" content="Graebeck Construction Ltd. — 25 years of institutional, commercial, and heritage construction across the National Capital Region." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.graebeck.com/" />
+  <meta property="og:title"       content="Graebeck Construction Ltd. — Ottawa's Trusted Builder" />
+  <meta property="og:description" content="25 years of institutional, commercial, and heritage construction across the National Capital Region." />
+  <meta property="og:image"       content="https://www.graebeck.com/images/projects/parliament-hill.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="canonical" href="https://www.graebeck.com/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            onyx:   '#1A1A1A',
-            forest: '#227750',
-            'forest-dark': '#1a5c3a',
-            cool:   '#F4F4F9',
-            gold:   '#005193',
-            'gold-light': '#0066b8',
-          },
-          fontFamily: {
-            montserrat: ['Montserrat', 'sans-serif'],
-            inter: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <script src="js/tailwind-config.js"></script>
   <link rel="stylesheet" href="css/custom.css" />
+
   <style>
-    /* Homepage-only logo animation: slide in from left */
-    @-webkit-keyframes logoEntranceX {
-      from { opacity: 0; -webkit-transform: translateX(-60px); transform: translateX(-60px); }
-      to   { opacity: 1; -webkit-transform: translateX(0);     transform: translateX(0); }
-    }
-    @keyframes logoEntranceX {
-      from { opacity: 0; -webkit-transform: translateX(-60px); transform: translateX(-60px); }
-      to   { opacity: 1; -webkit-transform: translateX(0);     transform: translateX(0); }
-    }
-    .nav-logo img {
-      -webkit-animation: logoEntranceX 0.8s ease-out both !important;
-              animation: logoEntranceX 0.8s ease-out both !important;
-    }
     #hero-bg {
       position: absolute;
       inset: 0;
       background-image: url('images/projects/beau-roc.png');
       background-size: cover;
       background-position: center 35%;
-      transform: scale(1);
-    }
-    #hero-bg.loaded {
-      transform: scale(1);
     }
     #hero-overlay {
       position: absolute;
@@ -67,452 +43,349 @@
       );
     }
   </style>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Graebeck Construction Ltd.",
+    "url": "https://www.graebeck.com",
+    "logo": "https://www.graebeck.com/images/logo.png",
+    "foundingDate": "2000",
+    "description": "General contractor specialising in institutional, commercial, and heritage restoration projects across Ottawa and the National Capital Region.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6361 Fourth Line Road",
+      "addressLocality": "North Gower",
+      "addressRegion": "ON",
+      "postalCode": "K0A 2T0",
+      "addressCountry": "CA"
+    },
+    "telephone": "+16135919100",
+    "email": "gcl@graebeck.com",
+    "areaServed": "Ottawa, National Capital Region, Ontario"
+  }
+  </script>
 </head>
 <body class="bg-cool text-onyx page-home">
 
-  <!-- ═══════════════════════════════════════════
-       NAVIGATION
-  ════════════════════════════════════════════ -->
-  <nav id="navbar" class="fixed top-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+  <div id="site-nav"></div>
 
-        <!-- Logo -->
-        <a href="index.html" class="nav-logo flex items-center gap-3 no-underline">
-          <img src="images/logo.png" alt="Graebeck Construction Ltd." style="height:48px;width:auto;display:block;" />
-        </a>
+  <main>
 
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center gap-10 ml-8 lg:ml-12">
-          <a href="index.html"    class="nav-link active">Home</a>
-          <a href="projects.html" class="nav-link">Projects</a>
-          <a href="services.html" class="nav-link">Services</a>
-          <a href="about.html"    class="nav-link">About</a>
-          <a href="contact.html"  class="btn-primary" style="padding:12px 24px;font-size:0.72rem;">Get a Quote</a>
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════ -->
+    <section class="hero-section" aria-label="Hero">
+      <div id="hero-bg"></div>
+      <div id="hero-overlay" aria-hidden="true"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full" style="padding-top: 88px;">
+        <div class="max-w-3xl">
+          <div class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            Ottawa's Trusted Builder Since 2000
+          </div>
+
+          <h1 class="heading-display text-white" style="font-size: clamp(1.6rem, 3.5vw, 2.8rem);">
+            <span class="hero-line hero-line-1">Ottawa's Construction Experts.</span>
+            <span class="hero-line hero-line-2">Designed for Today.</span>
+            <span class="hero-line hero-line-3">Built for Tomorrow.</span>
+          </h1>
+
+          <p class="text-gray-300 text-lg mt-8 mb-10 leading-relaxed font-inter max-w-xl" data-reveal data-delay="150">
+            Precision craftsmanship for institutional, commercial, and heritage
+            projects across the National Capital Region. From Parliament Hill
+            to community hospitals — we build what matters.
+          </p>
+
+          <div class="flex flex-wrap gap-4" data-reveal data-delay="300">
+            <a href="projects.html" class="btn-primary">
+              View Our Work
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+            <a href="contact.html" class="btn-outline">Request a Quote</a>
+          </div>
         </div>
-
-        <!-- Hamburger -->
-        <button id="hamburger" class="hamburger md:hidden" aria-label="Open navigation" aria-controls="nav-overlay" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
-    </div>
-  </nav>
-
-  <!-- Full-screen nav overlay -->
-  <div id="nav-overlay" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
-    <div class="overlay-header">
-      <a href="index.html" class="overlay-logo">
-        <img src="images/logo-footer.png" alt="Graebeck Construction Ltd." />
-      </a>
-      <button id="overlay-close" class="overlay-close" aria-label="Close navigation">&times;</button>
-    </div>
-    <nav class="overlay-nav">
-      <a href="index.html"    class="overlay-link active-page">Home</a>
-      <a href="projects.html" class="overlay-link">Projects</a>
-      <a href="services.html" class="overlay-link">Services</a>
-      <a href="about.html"    class="overlay-link">About</a>
-      <a href="contact.html"  class="overlay-cta">Get a Quote <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </nav>
-    <div class="overlay-footer">
-      <span class="overlay-tagline">Graebeck Construction Ltd.</span>
-      <span class="overlay-tagline">Ottawa, ON &mdash; Est. 2000</span>
-    </div>
-  </div>
+    </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ════════════════════════════════════════════ -->
-  <section class="hero-section">
-    <div id="hero-bg"></div>
-    <div id="hero-overlay"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full" style="padding-top: 88px;">
-      <div class="max-w-3xl">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Ottawa's Trusted Builder Since 2000
+    <!-- ═══════════════════════════════════════════
+         STATS BAR
+    ════════════════════════════════════════════ -->
+    <section class="stats-bar" aria-label="Company statistics">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-800">
+          <div class="stat-item">
+            <span class="stat-number"><span data-target="25">0</span></span>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span data-target="250">0</span><span class="stat-suffix">+</span></span>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number"><span data-target="100">0</span><span class="stat-suffix">%</span></span>
+            <div class="stat-label">LEED Committed</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Zero</span>
+            <div class="stat-label">Lost-Time Incidents</div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <h1 class="heading-display text-white" style="font-size: clamp(1.6rem, 3.5vw, 2.8rem);">
-          <span class="hero-line hero-line-1">Ottawa's Construction Experts.</span>
-          <span class="hero-line hero-line-2">Designed for Today.</span>
-          <span class="hero-line hero-line-3">Built for Tomorrow.</span>
-        </h1>
 
-        <p class="text-gray-300 text-lg mt-8 mb-10 leading-relaxed font-inter max-w-xl" data-reveal data-delay="150">
-          Precision craftsmanship for institutional, commercial, and heritage
-          projects across the National Capital Region. From Parliament Hill
-          to community hospitals — we build what matters.
-        </p>
+    <!-- ═══════════════════════════════════════════
+         FEATURED PROJECTS
+    ════════════════════════════════════════════ -->
+    <section class="py-24 bg-cool" aria-labelledby="featured-projects-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div class="flex flex-wrap gap-4" data-reveal data-delay="300">
-          <a href="projects.html" class="btn-primary">
-            View Our Work
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-14 gap-6">
+          <div>
+            <p class="label-overline" data-reveal>Portfolio</p>
+            <div class="gold-divider"></div>
+            <h2 id="featured-projects-heading" class="heading-section text-onyx text-4xl" data-reveal data-delay="100">Featured Projects</h2>
+          </div>
+          <a href="projects.html" class="btn-dark self-start md:self-auto" style="padding:14px 28px;">
+            View All Projects
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
-          <a href="contact.html" class="btn-outline">Request a Quote</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       STATS BAR
-  ════════════════════════════════════════════ -->
-  <section class="stats-bar">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-800">
-
-        <div class="stat-item">
-          <span class="stat-number"><span data-target="25">0</span></span>
-          <div class="stat-label">Years of Excellence</div>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number"><span data-target="250">0</span><span class="stat-suffix">+</span></span>
-          <div class="stat-label">Projects Completed</div>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number"><span data-target="100">0</span><span class="stat-suffix">%</span></span>
-          <div class="stat-label">LEED Committed</div>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number"><span data-target="0">0</span></span>
-          <div class="stat-label">Lost-Time Incidents</div>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
 
-
-  <!-- ═══════════════════════════════════════════
-       FEATURED PROJECTS
-  ════════════════════════════════════════════ -->
-  <section class="py-24 bg-cool">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-      <!-- Section header -->
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-14 gap-6">
-        <div>
-          <p class="label-overline" data-reveal>Portfolio</p>
-          <div class="gold-divider"></div>
-          <h2 class="heading-section text-onyx text-4xl" data-reveal data-delay="100">Featured Projects</h2>
-        </div>
-        <a href="projects.html" class="btn-dark self-start md:self-auto" style="padding:14px 28px;">
-          View All Projects
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
-
-      <!-- Project grid -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-
-        <!-- Featured card (large) — Parliament Hill -->
-        <div class="md:col-span-7 project-card" style="height:520px;" data-reveal>
-          <img src="images/projects/parliament-hill.jpg" alt="Parliament Hill West Slope" loading="lazy" />
-          <div class="project-card-overlay"></div>
-          <div class="project-card-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </div>
-          <div class="project-card-content">
-            <span class="project-card-tag" style="background:#8B5E3C;">Historical</span>
-            <h3 class="font-montserrat font-bold text-white text-2xl mb-1">Parliament Hill</h3>
-            <p class="text-gray-300 text-sm font-inter">Wellington St., Ottawa, Ontario K1A 0A4</p>
-          </div>
-          <a href="projects/project-parliament.html" class="absolute inset-0" aria-label="Parliament Hill"></a>
-        </div>
-
-        <!-- Right column cards -->
-        <div class="md:col-span-5 flex flex-col gap-4">
-
-          <div class="project-card flex-1" style="height:248px;" data-reveal data-delay="100">
-            <img src="images/projects/almonte-hospital.jpg" alt="Almonte General Hospital" loading="lazy" />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </div>
-            <div class="project-card-content">
-              <span class="project-card-tag">Institutional</span>
-              <h3 class="font-montserrat font-bold text-white text-xl mb-1">Almonte Hospital</h3>
-              <p class="text-gray-300 text-sm font-inter">75 Spring Street, Almonte, Ontario K0A 1A0</p>
-            </div>
-            <a href="projects/project-hospital.html" class="absolute inset-0" aria-label="Almonte Hospital"></a>
-          </div>
-
-          <div class="project-card flex-1" style="height:248px;" data-reveal data-delay="200">
-            <img src="images/projects/earnscliffe.jpg" alt="Earnscliffe National Historic Site of Canada" loading="lazy" />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-arrow">
+          <!-- Featured card (large) — Parliament Hill -->
+          <div class="md:col-span-7 project-card" style="height:520px;" data-reveal>
+            <img src="images/projects/parliament-hill.jpg" alt="Parliament Hill West Slope restoration" loading="lazy" />
+            <div class="project-card-overlay" aria-hidden="true"></div>
+            <div class="project-card-arrow" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </div>
             <div class="project-card-content">
               <span class="project-card-tag" style="background:#8B5E3C;">Historical</span>
-              <h3 class="font-montserrat font-bold text-white text-xl mb-1">Earnscliffe National Historic Site of Canada</h3>
-              <p class="text-gray-300 text-sm font-inter">40 Sussex Drive, Ottawa, Ontario K1N 5A2</p>
+              <h3 class="font-montserrat font-bold text-white text-2xl mb-1">Parliament Hill</h3>
+              <p class="text-gray-300 text-sm font-inter">Wellington St., Ottawa, Ontario K1A 0A4</p>
             </div>
-            <a href="projects/project-restoration.html" class="absolute inset-0" aria-label="Earnscliffe National Historic Site"></a>
+            <a href="projects/project-parliament.html" class="absolute inset-0" aria-label="View Parliament Hill project"></a>
+          </div>
+
+          <!-- Right column cards -->
+          <div class="md:col-span-5 flex flex-col gap-4">
+
+            <div class="project-card flex-1" style="height:248px;" data-reveal data-delay="100">
+              <img src="images/projects/almonte-hospital.jpg" alt="Almonte General Hospital" loading="lazy" />
+              <div class="project-card-overlay" aria-hidden="true"></div>
+              <div class="project-card-arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </div>
+              <div class="project-card-content">
+                <span class="project-card-tag">Institutional</span>
+                <h3 class="font-montserrat font-bold text-white text-xl mb-1">Almonte Hospital</h3>
+                <p class="text-gray-300 text-sm font-inter">75 Spring Street, Almonte, Ontario K0A 1A0</p>
+              </div>
+              <a href="projects/project-hospital.html" class="absolute inset-0" aria-label="View Almonte Hospital project"></a>
+            </div>
+
+            <div class="project-card flex-1" style="height:248px;" data-reveal data-delay="200">
+              <img src="images/projects/earnscliffe.jpg" alt="Earnscliffe National Historic Site of Canada" loading="lazy" />
+              <div class="project-card-overlay" aria-hidden="true"></div>
+              <div class="project-card-arrow" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </div>
+              <div class="project-card-content">
+                <span class="project-card-tag" style="background:#8B5E3C;">Historical</span>
+                <h3 class="font-montserrat font-bold text-white text-xl mb-1">Earnscliffe National Historic Site</h3>
+                <p class="text-gray-300 text-sm font-inter">40 Sussex Drive, Ottawa, Ontario K1N 5A2</p>
+              </div>
+              <a href="projects/project-restoration.html" class="absolute inset-0" aria-label="View Earnscliffe National Historic Site project"></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES
+    ════════════════════════════════════════════ -->
+    <section class="py-24" style="background:#fff;" aria-labelledby="services-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <p class="label-overline" data-reveal>What We Do</p>
+          <div class="gold-divider mx-auto"></div>
+          <h2 id="services-heading" class="heading-section text-onyx text-4xl" data-reveal data-delay="100">Built on 25 Years of Expertise</h2>
+          <p class="text-gray-500 mt-4 font-inter leading-relaxed" data-reveal data-delay="200">
+            From lump-sum general contracting to full design-build delivery — Graebeck manages
+            every phase with the discipline and transparency Ottawa's most demanding projects require.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+          <div class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">General Contracting</h3>
+            <p class="text-gray-500 font-inter text-sm leading-relaxed">Affordable and effective contracting with over 20 years in the NCR. We offer lump sum tendering, guaranteed upset pricing, and cost-plus-fee arrangements — always delivering optimal value.</p>
+            <a href="services.html#general-contracting" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+          </div>
+
+          <div class="service-card" data-reveal data-delay="80">
+            <div class="service-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">Construction Management</h3>
+            <p class="text-gray-500 font-inter text-sm leading-relaxed">Comprehensive oversight from preliminary budgeting and constructability analysis through scheduling, tendering, supervision, quality control, and commissioning.</p>
+            <a href="services.html#construction-management" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+          </div>
+
+          <div class="service-card" data-reveal data-delay="160">
+            <div class="service-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">Project Management</h3>
+            <p class="text-gray-500 font-inter text-sm leading-relaxed">Experienced project managers and coordinators overseeing programming, site selection, feasibility, design development, value engineering, tendering, and move management.</p>
+            <a href="services.html#project-management" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+          </div>
+
+          <div class="service-card" data-reveal data-delay="240">
+            <div class="service-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">Design Build</h3>
+            <p class="text-gray-500 font-inter text-sm leading-relaxed">From concept to completion — single-point responsibility for site selection, outline specifications, design development, construction, fit-out, and commissioning.</p>
+            <a href="services.html#design-build" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="services.html" class="btn-dark">Explore All Services</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT TEASER
+    ════════════════════════════════════════════ -->
+    <section class="py-24 bg-cool" aria-labelledby="about-teaser-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div class="about-img-wrapper" data-reveal>
+            <img src="https://images.unsplash.com/photo-1541976590-713941681591?w=900&q=80"
+                 alt="Graebeck team reviewing architectural plans on site" loading="lazy" />
+          </div>
+
+          <div data-reveal data-delay="150">
+            <p class="label-overline">Our Story</p>
+            <div class="gold-divider"></div>
+            <h2 id="about-teaser-heading" class="heading-section text-onyx text-4xl mb-6">
+              North Gower Roots.<br />National-Scale Results.
+            </h2>
+            <p class="text-gray-600 font-inter leading-relaxed mb-5">
+              Founded in 2000 and headquartered in North Gower, Ontario, Graebeck Construction Ltd. has
+              grown from a trusted local contractor into one of the National Capital Region's most respected
+              general contractors. Our portfolio spans federal landmark restorations, critical health-care
+              infrastructure, and landmark commercial developments.
+            </p>
+            <p class="text-gray-600 font-inter leading-relaxed mb-8">
+              What sets us apart is not just the scale of our work — it's the discipline we bring to
+              every project. A commitment to transparent communication, rigorous safety protocols,
+              and sustainable building practices is baked into every estimate, every schedule, and
+              every final walkthrough.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-10">
+              <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>LEED Committed</span>
+              <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>COR Certified Safety</span>
+              <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>Member — OCA</span>
+            </div>
+
+            <a href="about.html" class="btn-dark">Our Full Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         WHY GRAEBECK BAND
+    ════════════════════════════════════════════ -->
+    <section style="background:var(--forest);" class="py-16" aria-labelledby="why-graebeck-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 id="why-graebeck-heading" class="sr-only">Why Choose Graebeck</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-white">
+
+          <div class="text-center" data-reveal>
+            <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:rgba(255,255,255,0.15);" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-xl mb-2">Uncompromising Safety</h3>
+            <p class="text-green-100 font-inter text-sm leading-relaxed">Zero-tolerance safety culture with COR certification, daily site audits, and a spotless incident record across all active project sites.</p>
+          </div>
+
+          <div class="text-center" data-reveal data-delay="100">
+            <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:rgba(255,255,255,0.15);" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-xl mb-2">Local Expertise</h3>
+            <p class="text-green-100 font-inter text-sm leading-relaxed">Deep knowledge of Ottawa's building codes, heritage designations, and regulatory landscape — relationships with local suppliers, trades, and inspectors since day one.</p>
+          </div>
+
+          <div class="text-center" data-reveal data-delay="200">
+            <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:rgba(255,255,255,0.15);" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="font-montserrat font-bold text-xl mb-2">Budget Integrity</h3>
+            <p class="text-green-100 font-inter text-sm leading-relaxed">Transparent estimating, rigorous cost controls, and proactive risk management ensure your project is delivered within approved budgets. No surprises.</p>
           </div>
 
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       SERVICES
-  ════════════════════════════════════════════ -->
-  <section class="py-24" style="background:#fff;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <p class="label-overline" data-reveal>What We Do</p>
-        <div class="gold-divider mx-auto"></div>
-        <h2 class="heading-section text-onyx text-4xl" data-reveal data-delay="100">Built on 25 Years of Expertise</h2>
-        <p class="text-gray-500 mt-4 font-inter leading-relaxed" data-reveal data-delay="200">
-          From lump-sum general contracting to full design-build delivery — Graebeck manages
-          every phase with the discipline and transparency Ottawa's most demanding projects require.
+    <!-- ═══════════════════════════════════════════
+         CTA SECTION
+    ════════════════════════════════════════════ -->
+    <section class="cta-section py-28" aria-labelledby="cta-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <p class="label-overline light mb-3" data-reveal>Let's Build Together</p>
+        <h2 id="cta-heading" class="heading-display text-white mb-6" style="font-size:clamp(2rem,4vw,3.5rem);" data-reveal data-delay="100">
+          Ready to Start Your Next Project?
+        </h2>
+        <p class="text-gray-400 font-inter text-lg mb-12 max-w-xl mx-auto leading-relaxed" data-reveal data-delay="200">
+          Whether you have full drawings or just a vision, our team is ready to listen.
+          Contact us for an initial consultation — no obligation.
         </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
-        <!-- Service 1: General Contracting -->
-        <div class="service-card" data-reveal>
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">General Contracting</h3>
-          <p class="text-gray-500 font-inter text-sm leading-relaxed">Affordable and effective contracting with over 20 years in the NCR. We offer lump sum tendering, guaranteed upset pricing, and cost-plus-fee arrangements — always delivering optimal value.</p>
-          <a href="services.html#general-contracting" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-        </div>
-
-        <!-- Service 2: Construction Management -->
-        <div class="service-card" data-reveal data-delay="80">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">Construction Management</h3>
-          <p class="text-gray-500 font-inter text-sm leading-relaxed">Comprehensive oversight from preliminary budgeting and constructability analysis through scheduling, tendering, supervision, quality control, and commissioning.</p>
-          <a href="services.html#construction-management" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-        </div>
-
-        <!-- Service 3: Project Management -->
-        <div class="service-card" data-reveal data-delay="160">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">Project Management</h3>
-          <p class="text-gray-500 font-inter text-sm leading-relaxed">Experienced project managers and coordinators overseeing programming, site selection, feasibility, design development, value engineering, tendering, and move management.</p>
-          <a href="services.html#project-management" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-        </div>
-
-        <!-- Service 4: Design Build -->
-        <div class="service-card" data-reveal data-delay="240">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-onyx text-lg mb-3">Design Build</h3>
-          <p class="text-gray-500 font-inter text-sm leading-relaxed">From concept to completion — single-point responsibility for site selection, outline specifications, design development, construction, fit-out, and commissioning.</p>
-          <a href="services.html#design-build" class="inline-flex items-center gap-2 mt-5 text-forest font-montserrat font-bold text-xs tracking-wider uppercase">Learn More <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-        </div>
-
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="services.html" class="btn-dark">Explore All Services</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       ABOUT TEASER
-  ════════════════════════════════════════════ -->
-  <section class="py-24 bg-cool">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        <!-- Image -->
-        <div class="about-img-wrapper" data-reveal>
-          <img src="https://images.unsplash.com/photo-1541976590-713941681591?w=900&q=80"
-               alt="Graebeck team reviewing architectural plans" loading="lazy" />
-        </div>
-
-        <!-- Content -->
-        <div data-reveal data-delay="150">
-          <p class="label-overline">Our Story</p>
-          <div class="gold-divider"></div>
-          <h2 class="heading-section text-onyx text-4xl mb-6">
-            North Gower Roots.<br />National-Scale Results.
-          </h2>
-          <p class="text-gray-600 font-inter leading-relaxed mb-5">
-            Founded in 2000 and headquartered in North Gower, Ontario, Graebeck Construction Ltd. has
-            grown from a trusted local contractor into one of the National Capital Region's most respected
-            general contractors. Our portfolio spans federal landmark restorations, critical health-care
-            infrastructure, and landmark commercial developments.
-          </p>
-          <p class="text-gray-600 font-inter leading-relaxed mb-8">
-            What sets us apart is not just the scale of our work — it's the discipline we bring to
-            every project. A commitment to transparent communication, rigorous safety protocols,
-            and sustainable building practices is baked into every estimate, every schedule, and
-            every final walkthrough.
-          </p>
-
-          <!-- Cert badges -->
-          <div class="flex flex-wrap gap-3 mb-10">
-            <span class="cert-badge"><span class="badge-dot"></span>LEED Committed</span>
-            <span class="cert-badge"><span class="badge-dot"></span>COR Certified Safety</span>
-            <span class="cert-badge"><span class="badge-dot"></span>Member — OCA</span>
-          </div>
-
-          <a href="about.html" class="btn-dark">Our Full Story</a>
+        <div class="flex flex-wrap gap-5 justify-center" data-reveal data-delay="300">
+          <a href="contact.html" class="btn-primary">
+            Request a Quote
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+          <a href="tel:6135919100" class="btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            (613) 591-9100
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+  </main>
 
-  <!-- ═══════════════════════════════════════════
-       WHY GRAEBECK BAND
-  ════════════════════════════════════════════ -->
-  <section style="background:var(--forest);" class="py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-white">
+  <div id="site-footer"></div>
 
-        <div class="text-center" data-reveal>
-          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:rgba(255,255,255,0.15);">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-xl mb-2">Uncompromising Safety</h3>
-          <p class="text-green-100 font-inter text-sm leading-relaxed">Zero-tolerance safety culture with COR certification, daily site audits, and a spotless incident record across all active project sites.</p>
-        </div>
-
-        <div class="text-center" data-reveal data-delay="100">
-          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:rgba(255,255,255,0.15);">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-xl mb-2">Local Expertise</h3>
-          <p class="text-green-100 font-inter text-sm leading-relaxed">Deep knowledge of Ottawa's building codes, heritage designations, and regulatory landscape — relationships with local suppliers, trades, and inspectors since day one.</p>
-        </div>
-
-        <div class="text-center" data-reveal data-delay="200">
-          <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:rgba(255,255,255,0.15);">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          </div>
-          <h3 class="font-montserrat font-bold text-xl mb-2">Budget Integrity</h3>
-          <p class="text-green-100 font-inter text-sm leading-relaxed">Transparent estimating, rigorous cost controls, and proactive risk management ensure your project is delivered within approved budgets. No surprises.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       CTA SECTION
-  ════════════════════════════════════════════ -->
-  <section class="cta-section py-28">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-      <p class="label-overline light mb-3" data-reveal>Let's Build Together</p>
-      <h2 class="heading-display text-white mb-6" style="font-size:clamp(2rem,4vw,3.5rem);" data-reveal data-delay="100">
-        Ready to Start Your Next Project?
-      </h2>
-      <p class="text-gray-400 font-inter text-lg mb-12 max-w-xl mx-auto leading-relaxed" data-reveal data-delay="200">
-        Whether you have full drawings or just a vision, our team is ready to listen.
-        Contact us for an initial consultation — no obligation.
-      </p>
-      <div class="flex flex-wrap gap-5 justify-center" data-reveal data-delay="300">
-        <a href="contact.html" class="btn-primary">
-          Request a Quote
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-        <a href="tel:6135919100" class="btn-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-          (613) 591-9100
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════════ -->
-  <footer class="site-footer">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-        <!-- Brand -->
-        <div class="lg:col-span-1">
-          <div class="flex items-center gap-3 mb-5">
-            <img src="images/logo-footer.png" alt="Graebeck Construction Ltd." style="height:40px;width:auto;display:block;" />
-          </div>
-          <p class="text-gray-500 text-sm font-inter leading-relaxed mb-6">
-            Building the National Capital Region's most trusted structures since 2000.
-          </p>
-          <div class="flex gap-3">
-            <a href="#" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center border border-gray-700 text-gray-500 hover:border-gold hover:text-gold transition-colors">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Navigation</h4>
-          <nav class="flex flex-col">
-            <a href="index.html"    class="footer-link">Home</a>
-            <a href="projects.html" class="footer-link">Projects</a>
-            <a href="services.html" class="footer-link">Services</a>
-            <a href="about.html"    class="footer-link">About Us</a>
-            <a href="contact.html"  class="footer-link">Contact</a>
-          </nav>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Services</h4>
-          <nav class="flex flex-col">
-            <a href="services.html#institutional" class="footer-link">Institutional Construction</a>
-            <a href="services.html#commercial"    class="footer-link">Commercial Build-Out</a>
-            <a href="services.html#restoration"   class="footer-link">Historical Restoration</a>
-            <a href="services.html#leed"          class="footer-link">LEED & Green Building</a>
-            <a href="services.html#renovation"    class="footer-link">Renovation & Retrofit</a>
-          </nav>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="font-montserrat font-bold text-white text-sm tracking-widest uppercase mb-5">Contact Us</h4>
-          <address class="not-italic text-gray-500 font-inter text-sm leading-loose">
-            6361 Fourth Line Road<br />
-            North Gower, ON &nbsp;K0A 2T0
-          </address>
-          <a href="tel:6135919100" class="block text-gray-400 hover:text-gold transition-colors font-inter text-sm mt-3">(613) 591-9100</a>
-          <a href="mailto:gcl@graebeck.com" class="block text-gray-400 hover:text-gold transition-colors font-inter text-sm">gcl@graebeck.com</a>
-          <a href="contact.html" class="btn-primary mt-6 inline-flex" style="padding:12px 20px;font-size:0.7rem;">Get a Quote</a>
-        </div>
-
-      </div>
-
-      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs font-inter">
-        <span>&copy; 2025 Graebeck Construction Ltd. All rights reserved.</span>
-        <span>6361 Fourth Line Rd, North Gower, ON &nbsp;·&nbsp; (613) 591-9100</span>
-      </div>
-    </div>
-  </footer>
-
+  <script src="js/components.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    window.addEventListener('load', function () {
-      var bg = document.getElementById('hero-bg');
-      if (bg) bg.classList.add('loaded');
-    });
-  </script>
 </body>
 </html>
