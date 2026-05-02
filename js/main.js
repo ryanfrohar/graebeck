@@ -90,7 +90,7 @@
   const revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length) {
     const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // stagger children when parent has data-stagger
           const delay = entry.target.getAttribute('data-delay') || 0;
@@ -171,18 +171,18 @@
     let   current  = 0;
     const lbImg    = lb.querySelector('#lb-img');
 
-    function openLb(index) {
+    const openLb = (index) => {
       current = index;
       lbImg.src = images[current];
       lb.style.display = 'block';
       document.body.style.overflow = 'hidden';
-    }
-    function closeLb() {
+    };
+    const closeLb = () => {
       lb.style.display = 'none';
       document.body.style.overflow = '';
-    }
-    function showPrev() { current = (current - 1 + images.length) % images.length; lbImg.src = images[current]; }
-    function showNext() { current = (current + 1) % images.length; lbImg.src = images[current]; }
+    };
+    const showPrev = () => { current = (current - 1 + images.length) % images.length; lbImg.src = images[current]; };
+    const showNext = () => { current = (current + 1) % images.length; lbImg.src = images[current]; };
 
     galleryThumbs.forEach((thumb, i) => thumb.addEventListener('click', () => openLb(i)));
     lb.querySelector('#lb-close').addEventListener('click', closeLb);
