@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact &amp; Quote | Graebeck Construction Ltd.</title>
   <meta name="description" content="Contact Graebeck Construction Ltd. for a project quote or consultation. Ottawa's trusted builder for institutional, commercial, and heritage projects." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Graebeck Construction Ltd." />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
@@ -12,6 +14,9 @@
   <meta property="og:title"       content="Contact &amp; Quote | Graebeck Construction Ltd." />
   <meta property="og:description" content="Contact Ottawa's trusted builder. We respond within one business day." />
   <meta property="og:image"       content="https://www.graebeck.com/images/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:alt"   content="Graebeck Construction Ltd. logo" />
+  <meta property="og:locale"      content="en_CA" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta property="og:site_name"    content="Graebeck Construction Ltd." />
   <meta name="twitter:title"       content="Contact &amp; Quote | Graebeck Construction Ltd." />
@@ -30,10 +35,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.graebeck.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.graebeck.com/contact.html" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.graebeck.com/#organization"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.graebeck.com/contact.html#webpage",
+        "url": "https://www.graebeck.com/contact.html",
+        "name": "Contact & Quote | Graebeck Construction Ltd.",
+        "isPartOf": { "@id": "https://www.graebeck.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.graebeck.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.graebeck.com/contact.html" }
+        ]
+      }
     ]
   }
   </script>
@@ -286,7 +306,7 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/components.js"></script>
-  <script src="js/main.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>
