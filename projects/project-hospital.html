@@ -27,8 +27,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../js/tailwind-config.js"></script>
   <link rel="stylesheet" href="../css/custom.css" />
 
   <script type="application/ld+json">
@@ -70,8 +68,8 @@
         <img src="../images/projects/almonte-hospital.jpg" alt="Almonte General Hospital renovation" class="project-hero-img" />
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(26,26,26,0.7) 100%);" aria-hidden="true"></div>
         <div style="position:absolute;bottom:32px;left:0;right:0;">
-          <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm font-inter text-gray-300">
+          <div class="container">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
               <a href="../index.html" class="hover:text-blue transition-colors">Home</a><span class="text-gray-500" aria-hidden="true">/</span>
               <a href="../projects.html" class="hover:text-blue transition-colors">Projects</a><span class="text-gray-500" aria-hidden="true">/</span>
               <span class="text-white" aria-current="page">Almonte Hospital</span>
@@ -82,10 +80,10 @@
     </div>
 
     <section class="py-20 bg-cool">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <div class="container">
+        <div class="grid-project-detail">
 
-          <article class="lg:col-span-2">
+          <article class="">
             <span class="project-card-tag inline-block mb-4">Institutional</span>
             <h1 class="heading-display text-onyx mb-3" style="font-size:clamp(2rem,4vw,3rem);">Almonte Hospital<br/>Renovation</h1>
             <div class="blue-divider"></div>
@@ -122,7 +120,7 @@
               <h2 class="heading-section text-onyx text-2xl mb-6">Key Achievements</h2>
               <div class="space-y-5">
                 <div class="flex gap-4 p-5 bg-white border border-gray-200">
-                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
@@ -131,7 +129,7 @@
                   </div>
                 </div>
                 <div class="flex gap-4 p-5 bg-white border border-gray-200">
-                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
@@ -140,7 +138,7 @@
                   </div>
                 </div>
                 <div class="flex gap-4 p-5 bg-white border border-gray-200">
-                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <div class="w-8 h-8 bg-forest flex items-center justify-center flex-shrink-0" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                   </div>
                   <div>
@@ -152,8 +150,8 @@
             </div>
           </article>
 
-          <aside class="lg:col-span-1">
-            <div class="bg-white border border-gray-200 p-8 sticky top-28">
+          <aside class="">
+            <div class="bg-white border border-gray-200 p-8 sticky-sidebar">
               <h3 class="font-montserrat font-bold text-onyx text-sm tracking-widest uppercase mb-2">Project Details</h3>
               <div class="blue-divider" style="margin-bottom:0;"></div>
               <dl>
@@ -172,7 +170,7 @@
         <!-- Gallery -->
         <div class="mt-20">
           <h2 class="heading-section text-onyx text-2xl mb-8">Project Gallery</h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div class="grid-gallery">
             <div class="gallery-thumb" data-lightbox="../images/projects/almonte-hospital.jpg">
               <img src="../images/projects/almonte-hospital.jpg" alt="Hospital Exterior" loading="lazy" />
             </div>
@@ -182,11 +180,11 @@
 
         <!-- More Projects -->
         <div class="mt-20 pt-16 border-t border-gray-200">
-          <div class="flex items-center justify-between mb-10">
+          <div class="flex-between mb-10">
             <h2 class="heading-section text-onyx text-2xl">More Projects</h2>
             <a href="../projects.html" class="text-forest font-montserrat font-bold text-xs tracking-wider uppercase hover:underline">View All →</a>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="grid-more-projects">
             <div class="project-card" style="height:240px;"><img src="../images/projects/montfort-hospital.jpg" alt="Montfort Hospital" loading="lazy"/><div class="project-card-overlay" aria-hidden="true"></div><div class="project-card-content"><span class="project-card-tag">Institutional</span><h3 class="font-montserrat font-bold text-white text-lg">Montfort Hospital</h3></div><a href="project-montfort.html" class="absolute inset-0" aria-label="View Montfort Hospital project"></a></div>
             <div class="project-card" style="height:240px;"><img src="../images/projects/parliament-hill.jpg" alt="Parliament Hill West Slope" loading="lazy"/><div class="project-card-overlay" aria-hidden="true"></div><div class="project-card-content"><span class="project-card-tag" style="background:#227750;">Historical</span><h3 class="font-montserrat font-bold text-white text-lg">Parliament Hill</h3></div><a href="project-parliament.html" class="absolute inset-0" aria-label="View Parliament Hill project"></a></div>
             <div class="project-card" style="height:240px;"><img src="../images/projects/commissionaires.jpg" alt="Commissionaires Ottawa" loading="lazy"/><div class="project-card-overlay" aria-hidden="true"></div><div class="project-card-content"><span class="project-card-tag">Institutional</span><h3 class="font-montserrat font-bold text-white text-lg">Commissionaires Ottawa</h3></div><a href="project-commissionaires.html" class="absolute inset-0" aria-label="View Commissionaires Ottawa project"></a></div>
