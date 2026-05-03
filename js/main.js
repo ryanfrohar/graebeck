@@ -176,7 +176,7 @@
       }
 
       try {
-        const res = await fetch('/', {
+        const res = await fetch(form.action, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: new URLSearchParams(new FormData(form)).toString(),
