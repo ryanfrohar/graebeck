@@ -28,8 +28,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/tailwind-config.js"></script>
   <link rel="stylesheet" href="css/custom.css" />
 
   <script type="application/ld+json">
@@ -69,7 +67,7 @@
     <div class="page-hero" role="img" aria-label="Graebeck team working on site">
       <div class="page-hero-bg" style="position:absolute;inset:0;background-image:url('images/about-team.jpg');background-size:cover;background-position:center 25%;z-index:0;" aria-hidden="true"></div>
       <div class="page-hero-overlay" style="position:absolute;inset:0;background:linear-gradient(108deg,rgba(10,10,10,0.90) 0%,rgba(17,17,17,0.80) 40%,rgba(26,26,26,0.65) 70%,rgba(34,119,80,0.15) 100%);z-index:1;" aria-hidden="true"></div>
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 page-hero-content">
+      <div class="container page-hero-content">
         <p class="label-overline light">Who We Are</p>
         <div class="blue-divider"></div>
         <h1 class="heading-display text-white" style="font-size:clamp(2.2rem,5vw,4rem);">About Graebeck</h1>
@@ -81,8 +79,8 @@
 
     <!-- STORY SECTION -->
     <section class="py-24 bg-cool" aria-labelledby="story-heading">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" style="overflow: visible;">
+      <div class="container">
+        <div class="grid-2" style="overflow:visible;">
 
           <div class="about-img-wrapper" data-reveal style="align-self: flex-start;">
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
@@ -112,7 +110,7 @@
               frameworks, and municipal permit processes gives our clients a tangible advantage
               on every project. We know this market, and our track record proves it.
             </p>
-            <div class="flex flex-wrap gap-3">
+            <div class="flex-tags">
               <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>LEED Committed</span>
               <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>COR Certified Safety</span>
               <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>OCA Member</span>
@@ -125,8 +123,8 @@
 
     <!-- STATS -->
     <section class="stats-bar" aria-label="Company statistics">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-800">
+      <div class="container">
+        <div class="grid-stats">
           <div class="stat-item">
             <span class="stat-number"><span data-target="25">0</span><span class="stat-suffix">+</span></span>
             <div class="stat-label">Years in Business</div>
@@ -149,13 +147,13 @@
 
     <!-- VALUES -->
     <section style="background:#fff;" class="py-24" aria-labelledby="values-heading">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="container">
         <div class="text-center max-w-2xl mx-auto mb-16">
           <p class="label-overline" data-reveal>What Drives Us</p>
           <div class="blue-divider mx-auto"></div>
           <h2 id="values-heading" class="heading-section text-onyx text-4xl" data-reveal data-delay="100">Our Core Values</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid-3">
 
           <div class="p-8 bg-cool border border-gray-200" data-reveal>
             <div class="service-icon mb-5" aria-hidden="true">
@@ -211,8 +209,8 @@
 
     <!-- COMMUNITY -->
     <section style="background:var(--forest);" class="py-20" aria-labelledby="community-heading">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="container">
+        <div class="grid-2">
           <div data-reveal>
             <p class="label-overline light">Community Roots</p>
             <div class="blue-divider"></div>
@@ -239,7 +237,7 @@
 
     <!-- CTA -->
     <section class="cta-section py-28" aria-labelledby="about-cta-heading">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="container-narrow text-center">
         <p class="label-overline light mb-3" data-reveal>Let's Build Together</p>
         <h2 id="about-cta-heading" class="heading-display text-white mb-6" style="font-size:clamp(2rem,4vw,3.5rem);" data-reveal data-delay="100">
           Ready to Start Your Next Project?
@@ -248,7 +246,7 @@
           Whether you have full drawings or just a vision, our team is ready to listen.
           Contact us for an initial consultation, no obligation.
         </p>
-        <div class="flex flex-wrap gap-5 justify-center" data-reveal data-delay="300">
+        <div class="flex-cta" data-reveal data-delay="300">
           <a href="contact.html" class="btn-primary">
             Request a Quote
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>

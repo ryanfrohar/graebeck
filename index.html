@@ -33,8 +33,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/tailwind-config.js"></script>
   <link rel="stylesheet" href="css/custom.css" />
 
   <style>
@@ -122,7 +120,7 @@
       <div id="hero-bg"></div>
       <div id="hero-overlay" aria-hidden="true"></div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full" style="padding-top: 88px; padding-bottom: 64px;">
+      <div class="container relative w-full" style="z-index:10;padding-top:140px;padding-bottom:96px;">
         <div class="max-w-3xl">
           <div class="hero-badge">
             <span class="dot" aria-hidden="true"></span>
@@ -141,7 +139,7 @@
             to community hospitals. We build what matters.
           </p>
 
-          <div class="flex flex-wrap gap-4" data-reveal data-delay="300">
+          <div class="flex-actions" data-reveal data-delay="300">
             <a href="projects.html" class="btn-primary">
               View Our Work
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -157,8 +155,8 @@
          STATS BAR
     ════════════════════════════════════════════ -->
     <section class="stats-bar" aria-label="Company statistics">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 divide-y divide-gray-800 md:divide-y-0 md:divide-x md:divide-gray-800">
+      <div class="container">
+        <div class="grid-stats">
           <div class="stat-item">
             <span class="stat-number"><span data-target="25">0</span></span>
             <div class="stat-label">Years of Excellence</div>
@@ -184,24 +182,24 @@
          FEATURED PROJECTS
     ════════════════════════════════════════════ -->
     <section class="py-24 bg-cool" aria-labelledby="featured-projects-heading">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="container">
 
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-14 gap-6">
+        <div class="section-header">
           <div>
             <p class="label-overline" data-reveal>Portfolio</p>
             <div class="blue-divider"></div>
             <h2 id="featured-projects-heading" class="heading-section text-onyx text-4xl" data-reveal data-delay="100">Featured Projects</h2>
           </div>
-          <a href="projects.html" class="btn-dark self-start md:self-auto" style="padding:14px 28px;">
+          <a href="projects.html" class="btn-dark" style="padding:14px 28px;align-self:flex-start;">
             View All Projects
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div class="grid-featured">
 
           <!-- Featured card (large) - Parliament Hill -->
-          <div class="md:col-span-7 project-card" style="height:520px;" data-reveal>
+          <div class="project-card" style="height:520px;" data-reveal>
             <img src="images/projects/parliament-hill.jpg" alt="Parliament Hill West Slope restoration" loading="lazy" />
             <div class="project-card-overlay" aria-hidden="true"></div>
             <div class="project-card-arrow" aria-hidden="true">
@@ -216,9 +214,9 @@
           </div>
 
           <!-- Right column cards -->
-          <div class="md:col-span-5 flex flex-col gap-4">
+          <div class="grid-featured-right">
 
-            <div class="project-card flex-1" style="height:248px;" data-reveal data-delay="100">
+            <div class="project-card" style="height:248px;" data-reveal data-delay="100">
               <img src="images/projects/almonte-hospital.jpg" alt="Almonte General Hospital" loading="lazy" />
               <div class="project-card-overlay" aria-hidden="true"></div>
               <div class="project-card-arrow" aria-hidden="true">
@@ -232,7 +230,7 @@
               <a href="projects/project-hospital.html" class="absolute inset-0" aria-label="View Almonte Hospital project"></a>
             </div>
 
-            <div class="project-card flex-1" style="height:248px;" data-reveal data-delay="200">
+            <div class="project-card" style="height:248px;" data-reveal data-delay="200">
               <img src="images/projects/earnscliffe.jpg" alt="Earnscliffe National Historic Site of Canada" loading="lazy" />
               <div class="project-card-overlay" aria-hidden="true"></div>
               <div class="project-card-arrow" aria-hidden="true">
@@ -256,7 +254,7 @@
          SERVICES
     ════════════════════════════════════════════ -->
     <section class="py-24" style="background:#fff;" aria-labelledby="services-heading">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="container">
 
         <div class="text-center max-w-2xl mx-auto mb-16">
           <p class="label-overline" data-reveal>What We Do</p>
@@ -268,7 +266,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="grid-service-cards max-w-4xl mx-auto">
 
           <div class="service-card" data-reveal>
             <div class="service-icon" aria-hidden="true">
@@ -319,8 +317,8 @@
          ABOUT TEASER
     ════════════════════════════════════════════ -->
     <section class="py-24 bg-cool" aria-labelledby="about-teaser-heading">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="container">
+        <div class="grid-2">
 
           <div class="about-img-wrapper" data-reveal>
             <img src="https://images.unsplash.com/photo-1541976590-713941681591?w=900&q=80"
@@ -346,7 +344,7 @@
               every final walkthrough.
             </p>
 
-            <div class="flex flex-wrap gap-3 mb-10">
+            <div class="flex-tags mb-10">
               <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>LEED Committed</span>
               <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>COR Certified Safety</span>
               <span class="cert-badge"><span class="badge-dot" aria-hidden="true"></span>OCA Member</span>
@@ -368,7 +366,7 @@
          CTA SECTION
     ════════════════════════════════════════════ -->
     <section class="cta-section py-28" aria-labelledby="cta-heading">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="container-narrow text-center">
         <p class="label-overline light mb-3" data-reveal>Let's Build Together</p>
         <h2 id="cta-heading" class="heading-display text-white mb-6" style="font-size:clamp(2rem,4vw,3.5rem);" data-reveal data-delay="100">
           Ready to Start Your Next Project?
@@ -377,7 +375,7 @@
           Whether you have full drawings or just a vision, our team is ready to listen.
           Contact us for an initial consultation, no obligation.
         </p>
-        <div class="flex flex-wrap gap-5 justify-center" data-reveal data-delay="300">
+        <div class="flex-cta" data-reveal data-delay="300">
           <a href="contact.html" class="btn-primary">
             Request a Quote
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
