@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact &amp; Quote — Graebeck Construction Ltd.</title>
+  <title>Contact &amp; Quote | Graebeck Construction Ltd.</title>
   <meta name="description" content="Contact Graebeck Construction Ltd. for a project quote or consultation. Ottawa's trusted builder for institutional, commercial, and heritage projects." />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.graebeck.com/contact.html" />
-  <meta property="og:title"       content="Contact &amp; Quote — Graebeck Construction Ltd." />
+  <meta property="og:title"       content="Contact &amp; Quote | Graebeck Construction Ltd." />
   <meta property="og:description" content="Contact Ottawa's trusted builder. We respond within one business day." />
   <meta property="og:image"       content="https://www.graebeck.com/images/logo.png" />
-  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta property="og:site_name"    content="Graebeck Construction Ltd." />
+  <meta name="twitter:title"       content="Contact &amp; Quote | Graebeck Construction Ltd." />
+  <meta name="twitter:description" content="Contact Ottawa's trusted builder. We respond within one business day." />
+  <meta name="twitter:image"       content="https://www.graebeck.com/images/logo.png" />
 
   <link rel="canonical" href="https://www.graebeck.com/contact.html" />
 
@@ -22,6 +26,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind-config.js"></script>
   <link rel="stylesheet" href="css/custom.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.graebeck.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.graebeck.com/contact.html" }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-cool text-onyx">
 
@@ -38,7 +53,7 @@
         <div class="gold-divider"></div>
         <h1 class="heading-display text-white" style="font-size:clamp(2.2rem,5vw,4rem);">Contact &amp; Quote</h1>
         <p class="text-gray-400 font-inter mt-4 max-w-xl text-lg leading-relaxed">
-          Whether you have a full set of drawings or just an idea — we want to hear from you.
+          Whether you have a full set of drawings or just an idea, we want to hear from you.
           Our team will respond within one business day.
         </p>
       </div>
@@ -120,7 +135,7 @@
                 </li>
                 <li class="flex items-center gap-3 text-gray-300 font-inter text-sm">
                   <span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0" aria-hidden="true"></span>
-                  Transparent estimating — no surprises
+                  Transparent estimating, no surprises
                 </li>
                 <li class="flex items-center gap-3 text-gray-300 font-inter text-sm">
                   <span class="w-1.5 h-1.5 bg-gold rounded-full flex-shrink-0" aria-hidden="true"></span>
@@ -152,7 +167,7 @@
                 Something went wrong submitting your message. Please try again or call us directly at <a href="tel:6135919100" class="underline">(613) 591-9100</a>.
               </div>
 
-              <!-- The form — Netlify Forms -->
+              <!-- The form - Netlify Forms -->
               <form id="contact-form" name="contact" class="contact-form space-y-6"
                     netlify data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
@@ -225,7 +240,7 @@
                 <div>
                   <label for="message">Project Description *</label>
                   <textarea id="message" name="message" rows="5"
-                    placeholder="Tell us about your project — scope, site conditions, specific requirements, or any other details that will help us understand your needs."
+                    placeholder="Tell us about your project: scope, site conditions, specific requirements, or any other details that will help us understand your needs."
                     required style="resize:vertical;"></textarea>
                 </div>
 
@@ -254,7 +269,7 @@
     <section aria-label="Office location map">
       <div class="w-full" style="height:380px;position:relative;overflow:hidden;background:#e8e8ec;">
         <iframe
-          title="Graebeck Construction Office — 6361 Fourth Line Rd, North Gower, ON"
+          title="Graebeck Construction Office, 6361 Fourth Line Rd, North Gower, ON"
           src="https://maps.google.com/maps?q=6361+Fourth+Line+Rd+North+Gower+ON&output=embed&z=13"
           style="width:100%;height:100%;border:0;filter:grayscale(0.4) contrast(1.05);"
           loading="lazy"
