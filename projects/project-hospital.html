@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Almonte Hospital | Graebeck Construction Ltd.</title>
   <meta name="description" content="Two-phase renovation of Almonte General Hospital, including asbestos abatement, new medical facility areas, and exterior upgrades while the hospital remained fully operational." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Graebeck Construction Ltd." />
 
   <meta property="og:type"        content="article" />
   <meta property="og:url"         content="https://www.graebeck.com/projects/project-hospital.html" />
   <meta property="og:title"       content="Almonte Hospital | Graebeck Construction Ltd." />
   <meta property="og:description" content="Two-phase renovation of Almonte General Hospital, delivered without disrupting a single day of patient care." />
   <meta property="og:image"       content="https://www.graebeck.com/images/projects/almonte-hospital.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:alt"   content="Almonte General Hospital renovation by Graebeck Construction" />
+  <meta property="og:locale"      content="en_CA" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta property="og:site_name"    content="Graebeck Construction Ltd." />
   <meta name="twitter:title"       content="Almonte Hospital | Graebeck Construction Ltd." />
@@ -29,11 +34,26 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://www.graebeck.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.graebeck.com/projects.html" },
-      { "@type": "ListItem", "position": 3, "name": "Almonte General Hospital", "item": "https://www.graebeck.com/projects/project-hospital.html" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.graebeck.com/#organization"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.graebeck.com/projects/project-hospital.html#webpage",
+        "url": "https://www.graebeck.com/projects/project-hospital.html",
+        "name": "Almonte Hospital | Graebeck Construction Ltd.",
+        "isPartOf": { "@id": "https://www.graebeck.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://www.graebeck.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.graebeck.com/projects.html" },
+          { "@type": "ListItem", "position": 3, "name": "Almonte General Hospital", "item": "https://www.graebeck.com/projects/project-hospital.html" }
+        ]
+      }
     ]
   }
   </script>
@@ -179,7 +199,7 @@
 
   <div id="site-footer"></div>
 
-  <script src="../js/components.js"></script>
-  <script src="../js/main.js"></script>
+  <script defer src="../js/components.js"></script>
+  <script defer src="../js/main.js"></script>
 </body>
 </html>

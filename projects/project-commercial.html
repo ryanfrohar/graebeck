@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C.D. Howe Building | Graebeck Construction Ltd.</title>
   <meta name="description" content="Four-phase LEED Silver modernization of three concourse levels at the C.D. Howe Building, 240 Sparks Street, delivered in a fully occupied federal office building." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Graebeck Construction Ltd." />
 
   <meta property="og:type"        content="article" />
   <meta property="og:url"         content="https://www.graebeck.com/projects/project-commercial.html" />
   <meta property="og:title"       content="C.D. Howe Building | Graebeck Construction Ltd." />
   <meta property="og:description" content="LEED Silver concourse modernization at Ottawa's iconic C.D. Howe Building. Four phases, zero tenant disruption." />
   <meta property="og:image"       content="https://www.graebeck.com/images/projects/cd-howe-building.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:alt"   content="C.D. Howe Building concourse renovation at 240 Sparks Street, Ottawa" />
+  <meta property="og:locale"      content="en_CA" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta property="og:site_name"    content="Graebeck Construction Ltd." />
   <meta name="twitter:title"       content="C.D. Howe Building | Graebeck Construction Ltd." />
@@ -29,11 +34,26 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://www.graebeck.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.graebeck.com/projects.html" },
-      { "@type": "ListItem", "position": 3, "name": "C.D. Howe Building", "item": "https://www.graebeck.com/projects/project-commercial.html" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.graebeck.com/#organization"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.graebeck.com/projects/project-commercial.html#webpage",
+        "url": "https://www.graebeck.com/projects/project-commercial.html",
+        "name": "C.D. Howe Building | Graebeck Construction Ltd.",
+        "isPartOf": { "@id": "https://www.graebeck.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://www.graebeck.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://www.graebeck.com/projects.html" },
+          { "@type": "ListItem", "position": 3, "name": "C.D. Howe Building", "item": "https://www.graebeck.com/projects/project-commercial.html" }
+        ]
+      }
     ]
   }
   </script>
@@ -176,7 +196,7 @@
 
   <div id="site-footer"></div>
 
-  <script src="../js/components.js"></script>
-  <script src="../js/main.js"></script>
+  <script defer src="../js/components.js"></script>
+  <script defer src="../js/main.js"></script>
 </body>
 </html>
