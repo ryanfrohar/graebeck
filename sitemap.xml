@@ -3,78 +3,91 @@
 
   <url>
     <loc>https://www.graebeck.com/</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/about.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/services.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/contact.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-parliament.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-restoration.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-hospital.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-montfort.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-commissionaires.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-commercial.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-egyptian.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.graebeck.com/projects/project-beau-roc.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
