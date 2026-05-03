@@ -95,7 +95,7 @@ body.page-home .nav-logo img {
 /* ── Hero ── */
 .hero-section {
   position: relative;
-  min-height: 65vh;
+  min-height: 80vh;
   display: flex;
   align-items: flex-start;
   overflow: hidden;
