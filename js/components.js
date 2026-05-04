@@ -26,7 +26,7 @@
         <a href="${b}projects.html" class="nav-link">Projects</a>
         <a href="${b}services.html" class="nav-link">Services</a>
         <a href="${b}about.html"    class="nav-link">About</a>
-        <a href="${b}contact.html"  class="btn-primary nav-cta">Get a Quote</a>
+        <a href="${b}contact.html"  class="btn-primary nav-cta">Contact Us</a>
       </div>
       <button id="hamburger" class="hamburger" aria-label="Open navigation" aria-controls="nav-overlay" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -47,7 +47,7 @@
     <a href="${b}projects.html" class="overlay-link">Projects</a>
     <a href="${b}services.html" class="overlay-link">Services</a>
     <a href="${b}about.html"    class="overlay-link">About</a>
-    <a href="${b}contact.html"  class="overlay-cta">Get a Quote ${arrowSvg}</a>
+    <a href="${b}contact.html"  class="overlay-cta">Contact Us ${arrowSvg}</a>
   </nav>
   <div class="overlay-footer">
     <span class="overlay-tagline">Graebeck Construction Ltd.</span>
