@@ -5,7 +5,8 @@
       "name": "graebeck",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["/tmp/serve.py"],
-      "port": 4200
+      "port": 4200,
+      "autoPort": true
     }
   ]
 }

@@ -25,6 +25,7 @@
         <a href="${b}index.html"    class="nav-link">Home</a>
         <a href="${b}projects.html" class="nav-link">Projects</a>
         <a href="${b}services.html" class="nav-link">Services</a>
+        <a href="${b}careers.html"  class="nav-link">Careers</a>
         <a href="${b}about.html"    class="nav-link">About</a>
         <a href="${b}contact.html"  class="btn-primary nav-cta">Contact Us</a>
       </div>
@@ -46,6 +47,7 @@
     <a href="${b}index.html"    class="overlay-link">Home</a>
     <a href="${b}projects.html" class="overlay-link">Projects</a>
     <a href="${b}services.html" class="overlay-link">Services</a>
+    <a href="${b}careers.html"  class="overlay-link">Careers</a>
     <a href="${b}about.html"    class="overlay-link">About</a>
     <a href="${b}contact.html"  class="overlay-cta">Contact Us ${arrowSvg}</a>
   </nav>
@@ -81,6 +83,7 @@
           <a href="${b}index.html"    class="footer-link">Home</a>
           <a href="${b}projects.html" class="footer-link">Projects</a>
           <a href="${b}services.html" class="footer-link">Services</a>
+          <a href="${b}careers.html"  class="footer-link">Careers</a>
           <a href="${b}about.html"    class="footer-link">About Us</a>
           <a href="${b}contact.html"  class="footer-link">Contact</a>
         </nav>
