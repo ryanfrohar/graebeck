@@ -159,13 +159,22 @@
                 Something went wrong submitting your message. Please try again or call us directly at <a href="tel:6135919100" class="underline">(613) 591-9100</a>.
               </div>
 
-              <!-- The form - Web3Forms (add access_key value before launch) -->
+              <!--
+                TODO (pre-launch checklist):
+                  [x] Web3Forms access_key set
+                  [x] Honeypot field in place (botcheck)
+                  [x] JS timing guard (blocks < 3 s submissions)
+                  [x] hCaptcha widget + web3forms client script
+                  [ ] Send a test message and confirm delivery
+                  [ ] Verify spam folder isn't catching legit mail
+              -->
               <form id="contact-form" name="contact" class="contact-form space-y-6"
                     action="https://api.web3forms.com/submit" method="POST">
-                <!-- TODO: paste Web3Forms access_key before launch -->
-                <input type="hidden" name="access_key" value="" />
-                <!-- Web3Forms honeypot -->
+                <input type="hidden" name="access_key" value="eda7fcc7-d12d-4e29-9b2b-db93680ee78b" />
+                <!-- Honeypot: bots fill this; real browsers leave it unchecked -->
                 <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+                <!-- Timing guard: populated by JS on page load; absent or stale = likely bot -->
+                <input type="hidden" name="_form_loaded" id="form-load-time" value="" />
 
                 <div class="grid-form-2">
                   <div>
@@ -209,6 +218,9 @@
                   </label>
                 </div>
 
+                <!-- hCaptcha — managed by web3forms client script -->
+                <div class="h-captcha" data-captcha="true"></div>
+
                 <button type="submit" class="btn-primary w-full justify-center" style="padding:18px;font-size:0.8rem;">
                   Send Message
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -240,6 +252,7 @@
 
   <div id="site-footer"></div>
 
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script defer src="js/components.js"></script>
   <script defer src="js/main.js"></script>
 </body>
