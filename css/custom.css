@@ -412,8 +412,28 @@ body.page-home .nav-logo img {
 .page-hero-content { position: relative; z-index: 2; }
 
 /* Ken Burns effect on page hero backgrounds */
-.page-hero-bg { transform: scale(1.04); transition: transform 10s ease; }
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  z-index: 0;
+  transform: scale(1.04);
+  transition: transform 10s ease;
+}
 .page-hero-bg.loaded { transform: scale(1); }
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(108deg, rgba(10,10,10,0.88) 0%, rgba(17,17,17,0.72) 50%, rgba(26,26,26,0.50) 100%);
+  z-index: 1;
+}
+
+/* ── Project Card Heights ── */
+.project-card-xl { height: 520px; }
+.project-card-lg { height: 340px; }
+.project-card-md { height: 248px; }
+.project-card-sm { height: 240px; }
 
 /* ── Filter Buttons ── */
 .filter-btn {
