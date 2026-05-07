@@ -182,6 +182,13 @@
         return;
       }
 
+      // Consent guard: must accept privacy terms before submitting
+      const consentBox = form.querySelector('#consent');
+      if (!consentBox || !consentBox.checked) {
+        alert('Please accept the privacy terms before submitting.');
+        return;
+      }
+
       // hCaptcha guard: block submission if captcha wasn't solved
       const hCaptchaResponse = form.querySelector('textarea[name="h-captcha-response"]');
       if (!hCaptchaResponse || !hCaptchaResponse.value) {
