@@ -164,35 +164,56 @@
     const form = document.getElementById('contact-form');
     if (!form) return;
 
+    // Record when the form was loaded so the submit handler can check elapsed time
+    const loadTimeField = document.getElementById('form-load-time');
+    if (loadTimeField) loadTimeField.value = Date.now().toString();
+
+    const MIN_SUBMIT_MS = 3000;
+
     form.addEventListener('submit', async e => {
       e.preventDefault();
       const submitBtn = form.querySelector('[type="submit"]');
       const errorMsg  = document.getElementById('form-error');
       const successMsg = document.getElementById('form-success');
 
+      // Timing guard: reject submissions that arrive faster than a human can type
+      const loadTime = parseInt(loadTimeField ? loadTimeField.value : '0', 10);
+      if (!loadTime || Date.now() - loadTime < MIN_SUBMIT_MS) {
+        return;
+      }
+
+      // hCaptcha guard: block submission if captcha wasn't solved
+      const hCaptchaResponse = form.querySelector('textarea[name="h-captcha-response"]');
+      if (!hCaptchaResponse || !hCaptchaResponse.value) {
+        alert('Please complete the captcha before submitting.');
+        return;
+      }
+
+      const originalText = submitBtn ? submitBtn.textContent : '';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
       }
 
       try {
-        const res = await fetch(form.action, {
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString(),
+          body: new FormData(form),
         });
+
+        const data = await res.json();
 
         if (res.ok) {
           form.style.display = 'none';
           if (successMsg) successMsg.classList.remove('hidden');
         } else {
-          throw new Error('Server returned ' + res.status);
+          throw new Error(data.message || 'Server returned ' + res.status);
         }
       } catch {
         if (errorMsg) errorMsg.classList.remove('hidden');
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Message';
+          submitBtn.textContent = originalText;
         }
       }
     });
