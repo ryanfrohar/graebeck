@@ -805,8 +805,8 @@ body.page-home .nav-logo img {
 @media (min-width: 1024px) { .nav-links { margin-left: 3rem; } }
 
 .social-links { display: flex; gap: 0.75rem; }
-.social-link-item { width: 2.25rem; height: 2.25rem; display: flex; align-items: center; justify-content: center; border: 1px solid #374151; color: #6b7280; transition: border-color 0.2s, color 0.2s; }
-.social-link-item:hover { border-color: var(--blue); color: var(--blue); }
+.social-link-item { display: inline-flex; align-items: center; color: #6b7280; transition: color 0.2s; }
+.social-link-item:hover { color: var(--blue); }
 .footer-contact-link { display: block; color: #9ca3af; font-family: 'Inter', sans-serif; font-size: 0.875rem; transition: color 0.2s; }
 .footer-contact-link:hover { color: var(--blue); }
 .footer-nav   { display: flex; flex-direction: column; }
