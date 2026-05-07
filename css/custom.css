@@ -967,6 +967,38 @@ address { font-style: normal; }
 .gap-12 { gap: 3rem; }
 .gap-16 { gap: 4rem; }
 
+/* ── Core Value Cards ── */
+.value-card {
+  background: var(--cool);
+  border: 1px solid rgba(0, 81, 147, 0.12);
+  border-top: 3px solid var(--blue);
+  border-radius: 4px;
+  padding: 2rem;
+}
+.value-card-number {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: rgba(0, 81, 147, 0.15);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.value-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--onyx);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+.value-card-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
 /* ── Accessibility: respect reduced-motion preference ── */
 @media (prefers-reduced-motion: reduce) {
   *,
