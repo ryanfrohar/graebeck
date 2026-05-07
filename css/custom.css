@@ -451,7 +451,7 @@ body.page-home .nav-logo img {
 .gallery-thumb:hover img { transform: scale(1.08); }
 
 /* ── Contact Form ── */
-.contact-form input,
+.contact-form input:not([type="checkbox"]),
 .contact-form textarea,
 .contact-form select {
   width: 100%;
@@ -465,7 +465,7 @@ body.page-home .nav-logo img {
   transition: border-color 0.25s;
   appearance: none;
 }
-.contact-form input:focus,
+.contact-form input:not([type="checkbox"]):focus,
 .contact-form textarea:focus,
 .contact-form select:focus { border-color: var(--forest); }
 .contact-form label {
