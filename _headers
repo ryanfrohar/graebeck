@@ -1,6 +1,11 @@
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; frame-src https://maps.google.com; connect-src 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; form-action https://api.web3forms.com; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://web3forms.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; frame-src https://maps.google.com; connect-src 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; form-action https://api.web3forms.com; frame-ancestors 'none'
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), fullscreen=(self)
+  Cache-Control: no-cache
+
+/images/*
+  Cache-Control: public, max-age=2592000
